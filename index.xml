@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pranay Mundra</title>
-    <link>http://mundrapranay.github.io/</link>
+    <link>https://mundrapranay.github.io/</link>
     <description>Recent content on Pranay Mundra</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://mundrapranay.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://mundrapranay.github.io/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
