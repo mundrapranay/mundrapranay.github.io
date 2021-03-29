@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pranay Mundra :: Publications</title>
+    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/live-resume.css">
+</head>
+
+<body>
+    <header>
+        <nav class="collapsible-nav" id="collapsible-nav">
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="resume.html" class="nav-link">RESUME</a>
+            <a href="publications.html" class="nav-link active">PUBLICATIONS</a>
+        </nav>
+        <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
+            data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
+    </header>
+    <div class="content-wrapper">
+        <aside>
+            <div class="profile-img-wrapper">
+                <img src="assets/images/dp.png" alt="profile">
+            </div>
+            <h1 class="profile-name">Pranay Mundra</h1>
+            <div class="text-center">
+                <span class="badge badge-white badge-pill profile-designation">Senior, B.Sc. Mathematics</span>
+            </div>
+            <div class="widget">
+                <div class="widget-content">
+                    <p>University of Washington, Seattle</p>
+                    <p>WA, USA</p>
+                    <p>pranay99@uw.edu</p>
+                </div>
+            </div>
+            <!-- <div class="text-center">
+                <span class="badge badge-white badge-pill profile-designation">Ph.D. Student, Computer Science</span>
+            </div>
+            <div class="widget">
+                <div class="widget-content">
+                    <p>University of Rochester</p>
+                    <p>New York, USA</p>
+                    <p>pranay.mundra@ur.rochester.edu</p>
+                </div>
+            </div> -->
+            <nav class="social-links">
+                <!-- <a href="#!" class="social-link"><i class="fab fa-twitter"></i></a> -->
+                <a href="http://linkedin.com/in/pranay-mundra/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="http://github.com/mundrapranay" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://scholar.google.com/citations?user=7IJcHDwAAAAJ&hl=en" class="social-link"><i class="fab fa-google"></i></a>
+            </nav>
+            <div class="widget card">
+                <div class="card-body">
+                    <div class="widget-content">
+                        <h5 class="widget-title card-title">AREAS OF INTERESTS</h5>
+                        <p>Database Management Systems</p>
+                        <p>Data Integration & Mining</p>
+                        <p>Natural Language Processing</p>
+                        <p>Knowledge Bases</p>
+                        <p>Machine Learning</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <section class="resume-section">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- <h2 class="section-title">Publications</h2> -->
+                        <ul class="time-line">
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">Mining Approximate Acyclic Schemas from Relations</span>
+                                <h6 class="time-line-item-title">International Conference on Management of Data, SIGMOD Conference 2020</h6>
+                                <p class="time-line-item-subtitle">Batya Kenig, Pranay Mundra, Guna Prasad, Babak Salimi, Dan Suciu</p>
+                                <p class="time-line-item-content">Acyclic schemes have numerous applications in databases and in machine learning, such as improved design, 
+                                    more efficient storage, and increased performance for queries and machine learning algorithms. Multivalued dependencies (MVDs) are the 
+                                    building blocks of acyclic schemes<span id="dots1">...</span>
+                                    <span id="more1">The discovery from data of both MVDs and acyclic schemes is more challenging than other forms of 
+                                    data dependencies, such as Functional Dependencies, because these dependencies do not hold on subsets of data, and because they are 
+                                    very sensitive to noise in the data; for example a single wrong or missing tuple may invalidate the schema. In this paper we present 
+                                    Maimon, a system for discovering approximate acyclic schemes and MVDs from data. We give a principled definition of approximation, 
+                                    by using notions from information theory, then describe the two components of Maimon: mining for approximate MVDs, then reconstructing 
+                                    acyclic schemes from approximate MVDs. We conduct an experimental evaluation of Maimon on 20 real-world datasets, and show that it can 
+                                    scale up to 1M rows, and up to 30 columns.</span>
+                                    <button class="btn btn-primary rounded-pill btn-xs" onclick="expandPaper1()" id="readMore1"> Read More </button>
+                                    <a href="https://dl.acm.org/doi/abs/10.1145/3318464.3380573" class="btn btn-info rounded-pill btn-xs"> Read Paper </a>
+                                </p>
+                            </li>
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">Compositional Generalization with Tree Stack Memory Units</span>
+                                <h6 class="time-line-item-title">arXiv Preprint</h6>
+                                <p class="time-line-item-subtitle">Forough Arabshahi, Zhichu Lu, Pranay Mundra, Sameer Singh, Animashree Anandkumar</p>
+                                <p class="time-line-item-content">We study compositional generalization, viz., the problem of zero-shot generalization to novel 
+                                    compositions of concepts in a domain. Standard neural networks fail to a large extent on compositional learning. We propose 
+                                    Tree Stack Memory Units (Tree-SMU) to enable strong compositional generalization<span id="dots2">...</span>
+                                    <span id="more2">Tree-SMU is a recursive neural network with Stack Memory Units (SMUs), a novel memory augmented neural network whose memory 
+                                    has a differentiable stack structure. Each SMU in the tree architecture learns to read from its stack and to write to it by 
+                                    combining the stacks and states of its children through gating. The stack helps capture long-range dependencies in the problem 
+                                    domain, thereby enabling compositional generalization. Additionally, the stack also preserves the ordering of each node’s 
+                                    descendants, thereby retaining locality on the tree. We demonstrate strong empirical results on two mathematical reasoning 
+                                    benchmarks. We use four compositionality tests to assess the generalization performance of Tree-SMU and show that it enables 
+                                    accurate compositional generalization compared to strong baselines such as Transformers and Tree-LSTMs.</span>
+                                    <button class="btn btn-primary rounded-pill btn-xs" onclick="expandPaper2()" id="readMore2"> Read More </button>
+                                    <a href="https://arxiv.org/pdf/1911.01545.pdf" class="btn btn-info rounded-pill btn-xs"> Read Paper </a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/live-resume.js"></script>
+</body>
+
+</html>

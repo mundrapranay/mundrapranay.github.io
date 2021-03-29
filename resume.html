@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pranay Mundra :: Resume</title>
+    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/live-resume.css">
+</head>
+
+<body>
+    <header>
+        <nav class="collapsible-nav" id="collapsible-nav">
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="resume.html" class="nav-link active">RESUME</a>
+            <a href="publications.html" class="nav-link">PUBLICATIONS</a>
+        </nav>
+        <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
+            data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
+    </header>
+    <div class="content-wrapper">
+        <aside>
+            <div class="profile-img-wrapper">
+                <img src="assets/images/dp.png" alt="profile">
+            </div>
+            <h1 class="profile-name">Pranay Mundra</h1>
+            <div class="text-center">
+                <span class="badge badge-white badge-pill profile-designation">Senior, B.Sc. Mathematics</span>
+            </div>
+            <div class="widget">
+                <div class="widget-content">
+                    <p>University of Washington, Seattle</p>
+                    <p>WA, USA</p>
+                    <p>pranay99@uw.edu</p>
+                    <a href="assets/resume.pdf" download="PranayMundraResume.pdf">
+                        <button class="btn btn-download-cv btn-primary rounded-pill"> <img src="assets/images/download.svg" alt="download"
+                            class="btn-img">DOWNLOAD CV </button>
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="text-center">
+                <span class="badge badge-white badge-pill profile-designation">Ph.D. Student, Computer Science</span>
+            </div>
+            <div class="widget">
+                <div class="widget-content">
+                    <p>University of Rochester</p>
+                    <p>New York, USA</p>
+                    <p>pranay.mundra@ur.rochester.edu</p>
+                    <a href="assets/resume.pdf" download="PranayMundraResume.pdf">
+                        <button class="btn btn-download-cv btn-primary rounded-pill"> <img src="assets/images/download.svg" alt="download"
+                            class="btn-img">DOWNLOAD CV </button>
+                    </a>
+                </div>
+            </div> -->
+            <nav class="social-links">
+                <!-- <a href="#!" class="social-link"><i class="fab fa-twitter"></i></a> -->
+                <a href="http://linkedin.com/in/pranay-mundra/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="http://github.com/mundrapranay" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://scholar.google.com/citations?user=7IJcHDwAAAAJ&hl=en" class="social-link"><i class="fab fa-google"></i></a>
+            </nav>
+            <div class="widget card">
+                <div class="card-body">
+                    <div class="widget-content">
+                        <h5 class="widget-title card-title">PROGRAMMING SKILLS</h5>
+                        <p>Java</p>
+                        <p>Python</p>
+                        <p>SQL</p>
+                        <p>C++</p>
+                        <p>Pytorch</p>
+                        <p>Boost-Python</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <section class="resume-section">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h2 class="section-title">Research & Industry</h2>
+                            <ul class="time-line">
+                                <li class="time-line-item">
+                                    <span class="badge badge-primary">June 2020 - Present</span>
+                                    <h6 class="time-line-item-title">Machine Learning Researcher</h6>
+                                    <p class="time-line-item-subtitle">CALTECH TENSORLAB</p>
+                                    <p class="time-line-item-content">Working on the problem of compositional generalization of Neural Networks. 
+                                        Advisors : Animashree Anandkumar, Forough Arabshahi.
+                                    </p>
+                                </li>
+                                <li class="time-line-item">
+                                    <span class="badge badge-primary">Jan 2020 - Dec 2020</span>
+                                    <h6 class="time-line-item-title">Undergraduate Research Assistant</h6>
+                                    <p class="time-line-item-subtitle">UNIVERSITY OF WASHINGTON DATABSE GROUP</p>
+                                    <p class="time-line-item-content">Worked on LightDB, a DBMS to query over all types of video data. Mapped high-level
+                                        Python API to the low-level constructs, thereby enabling query expression to a wider audience.<br>
+                                        Advisor : Brandon Haynes.
+                                    </p>
+                                </li>
+                                <li class="time-line-item">
+                                    <span class="badge badge-primary">April 2019 - Sept 2019</span>
+                                    <h6 class="time-line-item-title">Undergraduate Research Assistant</h6>
+                                    <p class="time-line-item-subtitle">UNIVERSITY OF WASHINGTON DATABSE GROUP</p>
+                                    <p class="time-line-item-content">Created Maimon, a system for discovering approximate acyclic schemas using MultiValued Dependencies(MVDs)
+                                        from relations. Optimized the MVDMiner to calculate entropies and prune out MVDs based on already discovered MVDs, hence reducing
+                                        number of file scans. Compared the performance tradeoff between in-memory database system(H2) and MySQL.<br>
+                                        Advisors : Batya Kenig, Dan Suciu.
+                                    </p>
+                                </li>
+                                <li class="time-line-item">
+                                    <span class="badge badge-primary">July 2018 - Sept 2018</span>
+                                    <h6 class="time-line-item-title">Web Developer Intern</h6>
+                                    <p class="time-line-item-subtitle">QURB LTD.</p>
+                                    <p class="time-line-item-content">Improved the whitelisting feature for UntrackME, a web extension
+                                        to prevent URL tracking; also integrated the Have I Been Pwned API to inform users about the
+                                        strength of their passwords and whether their credentials were part of a data leak. 
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2 class="section-title">Teaching Experience</h2>
+                            <ul class="time-line">
+                                <li class="time-line-item">
+                                    <span class="badge badge-primary">Two Semesters</span>
+                                    <h6 class="time-line-item-title">Undergraduate Teaching Assistant</h6>
+                                    <p class="time-line-item-subtitle">PAUL G. ALLEN SCHOOL OF COMPUTER SCIENCE & ENGINEERING</p>
+                                    <p class="time-line-item-content">Course - CSE 444 Database Systems Interals.<br>
+                                        April 2021 - June 2021<br>
+                                        Jan 2021 - March 2021
+                                    </p>
+                                </li>
+                                <li class="time-line-item">
+                                    <span class="badge badge-primary">Three Semesters</span>
+                                    <h6 class="time-line-item-title">Undergraduate Teaching Assistant</h6>
+                                    <p class="time-line-item-subtitle">PAUL G. ALLEN SCHOOL OF COMPUTER SCIENCE & ENGINEERING</p>
+                                    <p class="time-line-item-content">Course - CSE 414 Introduction to Database Systems.<br>
+                                        Sept 2020 - Dec 2020<br>
+                                        Jan 2020 - March 2020<br>
+                                        April 2019 - June 2019
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2 class="section-title">Education</h2>
+                            <ul class="time-line">
+                                <li class="time-line-item">
+                                    <span class="badge badge-primary">Aug 2021 - Present</span>
+                                    <h6 class="time-line-item-title">Ph.D. In Computer Science</h6>
+                                    <p class="time-line-item-subtitle">UNIVERSITY OF ROCHESTER, NY, USA</p>
+                                </li>
+                                <li class="time-line-item">
+                                    <span class="badge badge-primary">Sept 2017 - June 2021</span>
+                                    <h6 class="time-line-item-title">B.Sc. In Mathematics</h6>
+                                    <p class="time-line-item-subtitle">UNIVERSITY OF WASHINGTON, WA, USA</p>
+                                </li>
+                                <li class="time-line-item">
+                                    <span class="badge badge-primary">April 2013 - June 2017</span>
+                                    <h6 class="time-line-item-title">High School Diploma (CBSE)</h6>
+                                    <p class="time-line-item-subtitle">NEERJA MODI SCHOOL, RAJASTHAN, INDIA</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/live-resume.js"></script>
+</body>
+
+</html>
