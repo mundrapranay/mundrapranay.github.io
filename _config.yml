@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Pranay Mundra"
   avatar           : "profile.png"
-  bio              : "Ph.D. Student @ Department of Computer Science, University of Rochester"
+  bio              : "Ph.D. Student @ Department of Computer Science"
   location         : "Rochester, NY"
-  employer         :
+  employer         : "University of Rochester"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=7IJcHDwAAAAJ&hl=en"
-  email            :
+  email            : "pmundra@ur.rochester.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,13 +96,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "mundrapranay"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/pranay-mundra/"
   orcid            : "https://orcid.org/0000-0002-6727-1505"
   pinterest        :
   soundcloud       :
@@ -216,8 +216,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
-      comments: true
+      share: false
+      comments: false
   # _publications
   - scope:
       path: ""
