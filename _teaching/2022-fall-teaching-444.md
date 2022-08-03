@@ -8,6 +8,8 @@ date: 2022-08-31
 location: "Rochester, NY"
 ---
 
+{% include base_path %}
+
 ## Anouncements
 
 ## Office Hours & Contact
