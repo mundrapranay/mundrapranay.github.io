@@ -1,7 +1,7 @@
 ---
 title: "CSC 244/444: Knowledge Representation and Reasoning in AI"
 collection: teaching
-type: "Undergraduate/Graduate course"
+type: "Graduate Teaching Assistant"
 permalink: /teaching/2022-fall-teaching-444
 venue: "University of Rochester, Department of Computer Science"
 date: 2022-08-31
