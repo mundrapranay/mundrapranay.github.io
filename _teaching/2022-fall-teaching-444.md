@@ -13,9 +13,9 @@ location: "Rochester, NY"
 ## Anouncements
 
 ## Office Hours & Contact
-My office hours will be in person, in room 3209 Wegmans Hall on:
+My office hours will be in person, in room 3207 Wegmans Hall on:
 - Monday from 10:30 AM - 11:30 AM
-- Friday from 10:30 AM - 11:30 AM
+- Friday from 11:30 AM - 12:30 PM
 
 Please feel free to email me [pmundra@ur.rochester.edu](mailto:pmundra@ur.rochester.edu) if you need to speek to me but can't make it to office hours for some reason, and I can try to work something out.
 
