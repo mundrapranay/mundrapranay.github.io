@@ -13,7 +13,7 @@ location: "Rochester, NY"
 ## Anouncements
 
 ## Office Hours & Contact
-My office hours will be in person, in room 3207 Wegmans Hall on:
+My office hours will be in person, in room 2305 [Wegmans Hall](https://goo.gl/maps/9m8kD2994LsTFfP2A) on:
 - Monday from 10:30 AM - 11:30 AM
 - Friday from 11:30 AM - 12:30 PM
 
