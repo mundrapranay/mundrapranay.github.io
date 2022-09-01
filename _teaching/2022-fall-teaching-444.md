@@ -13,9 +13,9 @@ location: "Rochester, NY"
 ## Anouncements
 
 ## Office Hours & Contact
-My office hours will be in person, in room 2305 [Wegmans Hall](https://goo.gl/maps/9m8kD2994LsTFfP2A) on:
+My office hours will be in person, starting the week of September 5th, in Room 2305 [Wegmans Hall](https://goo.gl/maps/9m8kD2994LsTFfP2A) on:
 - Monday from 10:30 AM - 11:30 AM
-- Friday from 11:30 AM - 12:30 PM
+- Friday from 2:00 PM  - 3:00 PM
 
 Please feel free to email me [pmundra@ur.rochester.edu](mailto:pmundra@ur.rochester.edu) if you need to speek to me but can't make it to office hours for some reason, and I can try to work something out.
 

@@ -9,7 +9,7 @@ redirect_from:
 ---
 {% include base_path %}
 
-Hey! I'm Pranay Mundra, a Ph.D. Student at the Univeristy of Rochester, [Department of Computer Science](https://www.cs.rochester.edu) advised by [Professor Fatemeh Nargesian](https://fnargesian.com). My office is in room 2305 in [Wegmans Hall](https://goo.gl/maps/9m8kD2994LsTFfP2A). 
+Hey! I'm Pranay Mundra, a Ph.D. Student at the Univeristy of Rochester, [Department of Computer Science](https://www.cs.rochester.edu) advised by [Professor Fatemeh Nargesian](https://fnargesian.com). My office is in Room 2305 in [Wegmans Hall](https://goo.gl/maps/9m8kD2994LsTFfP2A). 
 
 ## My Research
 My main areas of interest are Database Systems and Data-Centric Machine Learning. I like working on data discovery and mining problems like minimizing data bias, improving data quality for machine learning, differential privacy systems, and query models. My current project involves selecting coresets for huge datasets in order to train ML models on the coresets with equivalent accuracy, lowering computational costs and enhancing speed. I'm also developing a solution that will allow for rapid aggregate queries over massive knowledge graphs with missing values. I also enjoy working on problems in number theory, group theory, probability, combinatronics, and graph theory with applications in computer science.
