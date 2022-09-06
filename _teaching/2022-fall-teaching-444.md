@@ -20,14 +20,14 @@ My office hours will be in person, starting the week of September 5th, in Room 2
 Please feel free to email me [pmundra@ur.rochester.edu](mailto:pmundra@ur.rochester.edu) if you need to speek to me but can't make it to office hours for some reason, and I can try to work something out.
 
 ## Written Assignments
-Please submit your written assginment solutions to [uploads.cs444.2020@gmail.com](mailto:uploads.cs444.2020@gmail.com) (use this email even if you're in 244)
+Please submit your written assginment solutions to [uploads.cs444.2022@gmail.com](mailto:uploads.cs444.2022@gmail.com) (use this email even if you're in 244)
 
 All assignments are due before class, unless explicitly stated otherwise.
 
 Typed assignment solutions are strongly preferred (though the assignments will also suggest copying answers into the text file of the assignment and copying Unicode symbols; this is also fine). If you want to typeset your answers, I recommend using [Overleaf](https://www.overleaf.com/), which is a very easy-to-use online LaTeX editor (you can also use [Mathcha](https://www.mathcha.io/) to create math/graphics and export them in LaTeX). Not only does this make it easier to grade, knowing how to create documents using LaTeX is also a valuable skill to have. If you do copy solutions into the assignment text file, please take extra care to ensure readability.
 
 ## Lisp Assignments
-Please submit your Lisp assignments to [uploads.cs444.2020@gmail.com](mailto:uploads.cs444.2020@gmail.com) (use this email even if you're in 244). The submission should be a **zip/rar/7z/tarball** file with the name **[firstinitial][lastname]_[assigmentnumber].[extension]**. For example, if I'm submitting my Lisp Assigment 0 solutions, my submission should be titled **pmundra_0.zip**. The compressed submission should contain the following files:
+Please submit your Lisp assignments to [uploads.cs444.2022@gmail.com](mailto:uploads.cs444.2022@gmail.com) (use this email even if you're in 244). The submission should be a **zip/rar/7z/tarball** file with the name **[firstinitial][lastname]_[assigmentnumber].[extension]**. For example, if I'm submitting my Lisp Assigment 0 solutions, my submission should be titled **pmundra_0.zip**. The compressed submission should contain the following files:
 - **[firstinitial][lastname]_src.lisp** (e.g. pmundra_src.lisp)
 - **[firstinitial][lastname]_test.lisp** (e.g. pmundra_test.lisp)
 - **README.txt**
