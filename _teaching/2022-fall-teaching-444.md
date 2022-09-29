@@ -11,6 +11,8 @@ location: "Rochester, NY"
 {% include base_path %}
 
 ## Anouncements
+Assignment 1 Solutions : Please [click here](https://mundrapranay.github.io/files/as1_solutions.pdf)
+
 
 ## Office Hours & Contact
 My office hours will be in person, starting the week of September 5th, in Room 2305 [Wegmans Hall](https://goo.gl/maps/9m8kD2994LsTFfP2A) on:
