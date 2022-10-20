@@ -12,6 +12,7 @@ location: "Rochester, NY"
 
 ## Anouncements
 Assignment 1 Solutions : Please [click here](https://mundrapranay.github.io/files/as1_solutions.pdf)
+Assignment 2 Solutions : Please [click here](https://mundrapranay.github.io/files/as2_solutions.pdf)
 
 
 ## Office Hours & Contact
