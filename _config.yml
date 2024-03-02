@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Pranay Mundra"
 title_separator          : "-"
 name                     : &name "Pranay Mundra"
-description              : &description "Ph.D. Student @ Department of Computer Science, University of Rochester"
+description              : &description "Research Data Engineer II @ URMC"
 url                      : https://mundrapranay.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "mundrapranay/mundrapranay.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Pranay Mundra"
   avatar           : "profile.png"
-  bio              : "Ph.D. Student @ Department of Computer Science"
+  bio              : "Research Data Engineer II @ URMC"
   employer         : "University of Rochester"
   location         : "Rochester, NY"
   pubmed           : 
