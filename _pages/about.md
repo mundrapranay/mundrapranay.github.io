@@ -9,7 +9,8 @@ redirect_from:
 ---
 {% include base_path %}
 
-Hey! I'm Pranay Mundra, a Research Data Engineer II at the University of Rochester Medical Center, [Department of Biostatistics & Computational Biology]() working with the [McCall Research Lab](https://mnmccall.com). 
+I’m an incoming PhD Student at [Yale CS](https://cpsc.yale.edu), working under [Professor Quanquan Liu](https://quanquancliu.com) on practical differential privacy distributed graph  algorithms. Currently I am a Research Data Engineer II at the University of Rochester Medical Center, [Department of Biostatistics & Computational Biology]() working with the [McCall Research Lab](https://mnmccall.com).
+
 
 ## My Background
 I graduated from the Univeristy of Rochester, [Department of Computer Science](https://www.cs.rochester.edu) with a M.Sc. in Computer Science, advised by [Professor Fatemeh Nargesian](https://fnargesian.com). As a Graduate Research Assistant, I developed [KOIOS](https://mundrapranay.github.io/publication/2023-04-03-koios), a novel filter verification system designed for top-k semantic similarity set search. Concurrently, I contributed to the development of [Quok](https://mundrapranay.github.io/publication/2023-06-18-aqp), a system tailored for approximate query answering over Open Knowledge. Additionally, I delved into the domain of coreset construction for machine learning, focusing on the creation of Fair K Coverage (FKC) coresets. My research aimed to select a substantially smaller subset of data, termed a coreset, capable of approximating the entire dataset. FKC coresets, designed to incorporate the vital data properties of fairness and coverage. 
