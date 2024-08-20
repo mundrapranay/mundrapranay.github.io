@@ -9,7 +9,7 @@ redirect_from:
 ---
 {% include base_path %}
 
-I’m an incoming PhD Student at [Yale CS](https://cpsc.yale.edu), working under [Professor Quanquan Liu](https://quanquancliu.com) on practical differential privacy distributed graph  algorithms. Currently I am a Research Data Engineer II at the University of Rochester Medical Center, [Department of Biostatistics & Computational Biology]() working with the [McCall Research Lab](https://mnmccall.com).
+I’m a PhD Student at [Yale CS](https://cpsc.yale.edu), working under [Professor Quanquan Liu](https://quanquancliu.com) on practical differential privacy distributed graph algorithms. Previously, I was working as a Research Data Engineer II at the University of Rochester Medical Center, [Department of Biostatistics & Computational Biology]() working with the [McCall Research Lab](https://mnmccall.com).
 
 
 ## My Background
