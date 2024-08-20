@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Pranay Mundra"
 title_separator          : "-"
 name                     : &name "Pranay Mundra"
-description              : &description "Research Data Engineer II @ URMC"
+description              : &description "Ph.D. @ Yale CS"
 url                      : https://mundrapranay.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "mundrapranay/mundrapranay.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Pranay Mundra"
   avatar           : "profile.png"
-  bio              : "Research Data Engineer II @ URMC"
-  employer         : "University of Rochester Medical Center"
-  location         : "Rochester, NY"
+  bio              : "Ph.D. @ Yale CS"
+  employer         : "Yale University"
+  location         : "New Haven, CT"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=7IJcHDwAAAAJ&hl=en"
-  email            : "pranay_mundra@urmc.rochester.edu"
+  email            : "pranay.mundra@yale.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
