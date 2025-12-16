@@ -1094,6 +1094,10 @@ footer p {
     justify-content: center;
   }
   
+  .hero-socials {
+    justify-content: center;
+  }
+  
   .cv-grid {
     grid-template-columns: 1fr;
   }
