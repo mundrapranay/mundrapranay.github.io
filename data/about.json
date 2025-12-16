@@ -1,0 +1,20 @@
+{
+  "intro": "I'm a PhD Student at [Yale CS](https://cpsc.yale.edu), working under [Professor Quanquan Liu](https://quanquancliu.com) on practical differential privacy distributed graph algorithms. My research focuses on making privacy-preserving computation both efficient and accessible.",
+  "sections": [
+    {
+      "title": "Background",
+      "content": [
+        "Previously, I was a Research Data Engineer II at the University of Rochester Medical Center, working with the [McCall Research Lab](https://mnmccall.com) on biostatistics and computational biology.",
+        "I graduated from the University of Rochester with a M.Sc. in Computer Science, advised by [Professor Fatemeh Nargesian](https://fnargesian.com). During my Master's, I developed [KOIOS](https://arxiv.org/pdf/2304.10572), a novel system for top-k semantic similarity set search, and contributed to [Quok](https://mundrapranay.github.io/publication/2023-06-18-aqp) for approximate query answering over Open Knowledge Graphs.",
+        "I also spent time as a visiting researcher at [MIT CSAIL](https://toc.csail.mit.edu/Parallel_Computing) and the [Paris Lodron Universität Salzburg Database Research Group](https://dbresearch.uni-salzburg.at)."
+      ]
+    },
+    {
+      "title": "Research Interests",
+      "content": [
+        "My main areas of interest span **Database Systems**, **Machine Learning**, and **Differential Privacy**. I enjoy working on data discovery and mining problems including minimizing data bias, improving data quality for machine learning, and developing privacy-preserving query models.",
+        "I'm particularly excited about the intersection of theoretical guarantees and practical implementations in distributed computing."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "categories": [
+    {
+      "name": "Programming Languages",
+      "skills": [
+        { "name": "Python", "level": 95 },
+        { "name": "C/C++", "level": 85 },
+        { "name": "Java", "level": 80 },
+        { "name": "SQL", "level": 90 },
+        { "name": "Rust", "level": 70 }
+      ]
+    },
+    {
+      "name": "Research Areas",
+      "skills": [
+        { "name": "Differential Privacy", "level": 90 },
+        { "name": "Distributed Algorithms", "level": 85 },
+        { "name": "Graph Theory", "level": 90 },
+        { "name": "Machine Learning", "level": 80 },
+        { "name": "Database Systems", "level": 85 }
+      ]
+    },
+    {
+      "name": "Tools & Frameworks",
+      "skills": [
+        { "name": "PyTorch", "level": 85 },
+        { "name": "PostgreSQL", "level": 90 },
+        { "name": "Git", "level": 95 },
+        { "name": "Docker", "level": 75 },
+        { "name": "LaTeX", "level": 95 }
+      ]
+    }
+  ]
+}
+

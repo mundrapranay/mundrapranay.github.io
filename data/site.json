@@ -1,0 +1,25 @@
+{
+  "title": "Pranay Mundra",
+  "description": "PhD Student at Yale CS",
+  "author": {
+    "name": "Pranay Mundra",
+    "avatar": "assets/images/profile.png",
+    "bio": "PhD Student at Yale CS",
+    "employer": "Yale University",
+    "location": "New Haven, CT",
+    "email": "pranay.mundra@yale.edu",
+    "social": {
+      "email": "pranay.mundra@yale.edu",
+      "github": "mundrapranay",
+      "twitter": "MundraPranay",
+      "linkedin": "pranay-mundra",
+      "googlescholar": "https://scholar.google.com/citations?user=7IJcHDwAAAAJ&hl=en",
+      "orcid": "https://orcid.org/0000-0002-6727-1505"
+    }
+  },
+  "navigation": [
+    { "title": "Publications", "url": "publications.html" },
+    { "title": "Teaching", "url": "teaching.html" },
+    { "title": "CV", "url": "cv.html" }
+  ]
+}

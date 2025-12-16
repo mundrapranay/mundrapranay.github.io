@@ -1,31 +1,238 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+# Personal Academic Website
 
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+A **minimal, modern** static website built with HTML, CSS, and JavaScript. No build process required—just edit JSON files and your site updates automatically.
 
-### Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file. 
+## ✨ Features
 
-# Instructions
+- 🎨 **Minimal Design** - Clean, modern aesthetic with lots of white space
+- 📱 **Fully Responsive** - Works perfectly on all devices
+- 🌙 **Dark Mode** - Toggle between light and dark themes
+- ⚡ **Fast** - Pure static files, no build process
+- 📝 **Easy to Edit** - Just update JSON files
+- 🔄 **Auto-Updating** - Publications appear everywhere automatically
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## 🚀 Quick Start
 
-See more info at https://academicpages.github.io/
+1. **Edit content** in the `data/` folder (JSON files)
+2. **Push to GitHub** - GitHub Pages automatically deploys
+3. **Done!** Your site is live
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+## 📝 How to Edit Content
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll liveserve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+### Update About Information
 
-# Changelog -- bugfixes and enhancements
+Edit `data/about.json`:
 
-There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
+```json
+{
+  "intro": "Your introduction paragraph here...",
+  "sections": [
+    {
+      "title": "Section Title",
+      "content": [
+        "First paragraph...",
+        "Second paragraph..."
+      ]
+    }
+  ]
+}
+```
 
-To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+**Tip:** Use markdown-style links: `[Link Text](https://url.com)` or `[Link Text](publications.html#paper-id)`
+
+### Add/Update Publications
+
+Edit `data/publications.json` - just add a new object to the array:
+
+```json
+{
+  "id": "unique-id",
+  "title": "Paper Title",
+  "authors": ["Author 1", "Author 2"],
+  "venue": "Conference Name",
+  "year": 2025,
+  "date": "2025-01-15",
+  "paperurl": "https://arxiv.org/pdf/...",
+  "abstract": "Abstract text here...",
+  "citation": ""
+}
+```
+
+**Publications automatically:**
+- Sort by year (newest first)
+- Display on publications page
+- Can be linked from about page using `[Link Text](publications.html#unique-id)`
+
+### Update Personal Information
+
+Edit `data/site.json`:
+
+```json
+{
+  "author": {
+    "name": "Your Name",
+    "bio": "Your bio",
+    "email": "your@email.com",
+    "location": "City, State",
+    "employer": "University Name",
+    "social": {
+      "github": "username",
+      "twitter": "username",
+      "linkedin": "username",
+      "googlescholar": "full-url",
+      "orcid": "full-url"
+    }
+  },
+  "navigation": [
+    { "title": "Publications", "url": "publications.html" },
+    { "title": "Teaching", "url": "teaching.html" },
+    { "title": "CV", "url": "cv.html" }
+  ]
+}
+```
+
+### Add Teaching Experience
+
+Edit `data/teaching.json`:
+
+```json
+{
+  "course": "CS 444",
+  "title": "Database Systems",
+  "type": "Teaching Assistant",
+  "venue": "Yale University",
+  "year": 2022,
+  "semester": "Fall",
+  "location": "City, State",
+  "description": "Course description..."
+}
+```
+
+## 🎨 Design Customization
+
+### Colors
+
+Edit CSS variables in `assets/css/main.css`:
+
+```css
+:root {
+  --color-bg: #ffffff;           /* Background */
+  --color-text: #1a1a1a;         /* Text color */
+  --color-accent: #0066cc;       /* Links and accents */
+  --color-border: #e5e5e5;      /* Borders */
+}
+```
+
+### Typography
+
+The site uses system fonts for maximum performance. To change, edit `assets/css/main.css`:
+
+```css
+--font-sans: "Your Font", sans-serif;
+```
+
+## 📁 File Structure
+
+```
+.
+├── data/                    # All content (edit these!)
+│   ├── site.json           # Site info, navigation, author
+│   ├── about.json          # About page content
+│   ├── publications.json  # Publications list
+│   └── teaching.json       # Teaching experience
+├── assets/
+│   ├── css/
+│   │   └── main.css        # All styles
+│   └── js/
+│       └── main.js         # Data loading & rendering
+├── images/                  # Images (profile, etc.)
+├── files/                   # PDFs (CV, papers, etc.)
+├── index.html              # Home/About page
+├── publications.html       # Publications page
+├── teaching.html          # Teaching page
+└── cv.html                # CV page
+```
+
+## 🔧 How It Works
+
+1. **HTML pages** provide the structure
+2. **JavaScript** (`assets/js/main.js`) loads JSON data and renders it
+3. **CSS** (`assets/css/main.css`) styles everything with a minimal design
+4. **No build step** - just edit JSON and push!
+
+## 🌐 Deployment
+
+### GitHub Pages (Automatic)
+
+1. Push to your `mundrapranay.github.io` repository
+2. GitHub Pages automatically serves the files
+3. Site is live at `https://mundrapranay.github.io`
+
+### Local Testing
+
+Just open `index.html` in a browser, or use a simple server:
+
+```bash
+# Python 3
+python3 -m http.server 8000
+
+# Node.js (with http-server)
+npx http-server
+
+# Then visit http://localhost:8000
+```
+
+## ✨ Adding a New Publication
+
+1. Open `data/publications.json`
+2. Add a new object to the array:
+
+```json
+{
+  "id": "my-new-paper",
+  "title": "My New Paper",
+  "authors": ["Your Name", "Co-author"],
+  "venue": "Conference Name",
+  "year": 2025,
+  "date": "2025-01-15",
+  "paperurl": "https://arxiv.org/pdf/...",
+  "abstract": "Paper abstract...",
+  "citation": ""
+}
+```
+
+3. Save and push to GitHub
+4. Publication automatically appears on publications page!
+
+## 🔗 Linking Publications
+
+In your about page (`data/about.json`), link to publications:
+
+```json
+"[Paper Name](publications.html#paper-id)"
+```
+
+The `#paper-id` links directly to that publication on the publications page.
+
+## 💡 Tips
+
+- **Keep IDs unique** - Publication IDs should be unique (use lowercase, hyphens)
+- **Use markdown links** - In about.json, use `[text](url)` format
+- **Test locally** - Open HTML files in browser to preview
+- **JSON syntax** - Make sure JSON is valid (use a JSON validator if needed)
+
+## 🐛 Troubleshooting
+
+**Content not updating?**
+- Check browser cache (hard refresh: Cmd+Shift+R / Ctrl+Shift+R)
+- Verify JSON syntax is valid
+- Check browser console for errors
+
+**Links not working?**
+- Make sure file paths are correct
+- Check that JSON files are in `data/` folder
+- Verify publication IDs match when linking
+
+---
+
+**That's it!** Edit the JSON files and see your changes live! 🎉

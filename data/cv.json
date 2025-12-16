@@ -1,0 +1,76 @@
+{
+  "education": [
+    {
+      "title": "PhD in Computer Science",
+      "institution": "Yale University",
+      "location": "New Haven, CT",
+      "date": "2024 - Present",
+      "description": "Research focus on practical differential privacy distributed graph algorithms. Advised by Professor Quanquan Liu."
+    },
+    {
+      "title": "M.Sc. in Computer Science",
+      "institution": "University of Rochester",
+      "location": "Rochester, NY",
+      "date": "2021 - 2023",
+      "description": "Thesis on top-k semantic similarity search. Advised by Professor Fatemeh Nargesian."
+    },
+    {
+      "title": "B.Sc. in Mathematics",
+      "institution": "University of Washington",
+      "location": "Seattle, WA",
+      "date": "2017 - 2021",
+      "description": "Focus on mathematical foundations and computer science applications."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Graduate Research Assistant",
+      "institution": "Yale University",
+      "location": "New Haven, CT",
+      "date": "Aug 2024 - Present",
+      "description": "Developed the first distributed LEDP k-core and triangle counting algorithms under Local Edge Differential Privacy (LEDP), leveraging input-sensitive graph properties to tighten utility bounds—achieving ≤3x error for k-core vs. 131x baseline and up to six orders of magnitude reduction in triangle counting error on billion-edge graphs. Published in ACM VLDB 2025."
+    },
+    {
+      "title": "Research Data Engineer II",
+      "institution": "University of Rochester Medical Center",
+      "location": "Rochester, NY",
+      "date": "Jan 2024 - Aug 2024",
+      "description": "Developed intelligent storage solutions for large sequencing data in the MicroRNA project, optimizing data retrieval for faster analysis. Led the creation of an open-source end-to-end software for microglia image analysis, packaging research ideas into accessible software."
+    },
+    {
+      "title": "Graduate Summer Researcher",
+      "institution": "MIT CSAIL — Parallel Computing Group",
+      "location": "Remote",
+      "date": "Jun 2023 - Aug 2023",
+      "description": "Implemented a benchmark suite for privacy-preserving locally adjustable graph algorithms in parallel and distributed settings. Advised by Quanquan C. Liu & Julian Shun."
+    },
+    {
+      "title": "Graduate Summer Researcher",
+      "institution": "Paris Lodron Universität Salzburg",
+      "location": "Salzburg, Austria",
+      "date": "Jun 2023 - Aug 2023",
+      "description": "Developed an alignment algorithm for dynamic bipartite graph matching, uncovering language patterns and semantic similarities in biblical texts across languages and epochs. Collaborated with linguists to integrate NLP and set similarity search into the BOSS project. Under review for VLDB 2026."
+    },
+    {
+      "title": "Graduate Research Assistant",
+      "institution": "University of Rochester",
+      "location": "Rochester, NY",
+      "date": "Jul 2021 - May 2023",
+      "description": "Developed KOIOS, a novel filter verification system for top-k set similarity search using semantic overlap, achieving 5.5x enhanced performance (IEEE ICDE 2023). Created fair coreset selection algorithm with 400x speedup, obtaining 70% accuracy with only 24% data. Worked on Quok for approximate query answering over Open Knowledge (HILDA 2023)."
+    },
+    {
+      "title": "Undergraduate ML Researcher",
+      "institution": "Caltech — Anima AI Lab",
+      "location": "Pasadena, CA",
+      "date": "Jun 2020 - Apr 2021",
+      "description": "Developed Tree Stack Memory Units (Tree-SMU), a novel recursive neural network architecture for compositional generalization in mathematical reasoning. Evaluated on four compositionality tests, consistently outperforming transformers, tree transformers, and Tree-LSTMs. (arXiv Preprint)"
+    },
+    {
+      "title": "Undergraduate Research Assistant",
+      "institution": "University of Washington — Database Group",
+      "location": "Seattle, WA",
+      "date": "Apr 2019 - Dec 2020",
+      "description": "Developed high-performance Python API for LightDB, accelerating query speed for VR/AR video data. Optimized API mapping to low-level constructs, reducing device transfer time. Created Maimon, a pioneering system for discovering approximate MultiValued Dependencies using information theory (ACM SIGMOD 2020)."
+    }
+  ]
+}
