@@ -149,19 +149,38 @@ function initMobileMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
     const mobileNav = document.getElementById('mobile-nav');
     const backdrop = document.getElementById('mobile-backdrop');
+    let scrollPosition = 0;
     
     function openMenu() {
+        // Save current scroll position
+        scrollPosition = window.pageYOffset;
+        
+        // Lock body scroll while preserving position
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.overflow = 'hidden';
+        
         menuToggle.classList.add('is-active');
         mobileNav.classList.add('is-open');
-        backdrop.classList.add('is-open');
-        document.body.style.overflow = 'hidden';
+        if (backdrop) backdrop.classList.add('is-open');
     }
     
     function closeMenu() {
         menuToggle.classList.remove('is-active');
         mobileNav.classList.remove('is-open');
-        backdrop.classList.remove('is-open');
+        if (backdrop) backdrop.classList.remove('is-open');
+        
+        // Restore body scroll
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
         document.body.style.overflow = '';
+        
+        // Restore scroll position
+        window.scrollTo(0, scrollPosition);
     }
     
     if (menuToggle && mobileNav) {
