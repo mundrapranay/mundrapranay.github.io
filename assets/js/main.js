@@ -372,73 +372,47 @@ async function loadPublications() {
 function createPublicationItem(pub, index) {
     const li = document.createElement('li');
     li.className = 'publication-item animate-on-scroll';
-    li.style.transitionDelay = `${index * 0.1}s`;
+    li.style.transitionDelay = `${index * 0.05}s`;
     li.id = pub.id;
     
     let html = '';
     
-    if (pub.year) {
-        html += `<span class="publication-year">${pub.year}</span>`;
-    }
-    
+    // Title (linked if paperurl exists)
     html += `<div class="publication-title">`;
     if (pub.paperurl) {
         html += `<a href="${pub.paperurl}" target="_blank" rel="noopener noreferrer">${pub.title}</a>`;
     } else {
         html += pub.title;
     }
-    html += `</div>`;
-    
-    if (pub.authors && pub.authors.length > 0) {
-        html += `<div class="publication-authors">${pub.authors.join(', ')}</div>`;
-    }
-    
-    if (pub.venue) {
-        html += `<div class="publication-venue">${pub.venue}</div>`;
-    }
-    
-    if (pub.abstract) {
-        html += `<div class="publication-abstract">${pub.abstract}</div>`;
-    }
-    
-    // Publication links with Paper and GitHub
-    html += `<div class="publication-links">`;
-    if (pub.paperurl) {
-        html += `<a href="${pub.paperurl}" class="link-paper" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-            </svg>
-            Paper
-        </a>`;
-    }
+    // Code link inline with title
     if (pub.github) {
-        html += `<a href="${pub.github}" class="link-github" target="_blank" rel="noopener noreferrer">
+        html += `<a href="${pub.github}" class="publication-code" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
             </svg>
-            Code
+            code
         </a>`;
-    }
-    if (pub.abstract) {
-        html += `<a href="#" class="link-github toggle-abstract">Abstract</a>`;
     }
     html += `</div>`;
     
-    li.innerHTML = html;
-    
-    // Toggle abstract
-    const toggleBtn = li.querySelector('.toggle-abstract');
-    if (toggleBtn) {
-        toggleBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            li.classList.toggle('expanded');
-            toggleBtn.textContent = li.classList.contains('expanded') ? 'Hide' : 'Abstract';
-        });
+    // Authors (bold "Pranay Mundra")
+    if (pub.authors && pub.authors.length > 0) {
+        const authorsFormatted = pub.authors.map(author => 
+            author === 'Pranay Mundra' ? `<strong>${author}</strong>` : author
+        ).join(', ');
+        html += `<div class="publication-authors">${authorsFormatted}</div>`;
     }
     
+    // Venue with year
+    if (pub.venue || pub.year) {
+        html += `<div class="publication-venue">`;
+        if (pub.venue) html += pub.venue;
+        if (pub.venue && pub.year) html += ', ';
+        if (pub.year) html += `<span class="publication-year">${pub.year}</span>`;
+        html += `</div>`;
+    }
+    
+    li.innerHTML = html;
     return li;
 }
 
