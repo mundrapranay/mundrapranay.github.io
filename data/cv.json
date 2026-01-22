@@ -75,9 +75,14 @@
   ],
   "service": [
     {
-      "role": "Program Committee Reviewer",
-      "venue": "Example Conference 2025",
-      "year": "2025"
+      "role": "Artifact Evaluation Committee Reviewer",
+      "venue": "ALENEX 2026",
+      "year": "2026"
+    }, 
+    {
+      "role" : "Progam Committee Reviewer",
+      "venue" : "Workshop on Reliable ML (NEURIPS 2025)",
+      "year" : "2025"
     }
   ]
 }
