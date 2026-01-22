@@ -552,6 +552,15 @@ async function loadCV() {
                 experienceContainer.appendChild(cvCard);
             });
         }
+        
+        // Load Service (reviewer roles)
+        const serviceContainer = document.getElementById('cv-service');
+        if (serviceContainer && data.service) {
+            data.service.forEach((item, index) => {
+                const serviceItem = createServiceItem(item, index);
+                serviceContainer.appendChild(serviceItem);
+            });
+        }
 
         // Load skills
         await loadSkills();
@@ -592,6 +601,21 @@ function createCVCard(item, index) {
             <span class="cv-card-date">${item.date}</span>
         </div>
         ${item.description ? `<div class="cv-card-desc">${item.description}</div>` : ''}
+    `;
+    
+    return div;
+}
+
+// Service item (reviewer roles)
+function createServiceItem(item, index) {
+    const div = document.createElement('div');
+    div.className = 'service-item';
+    div.style.animationDelay = `${index * 0.05}s`;
+    
+    div.innerHTML = `
+        <span class="service-role">${item.role}</span>
+        <span class="service-venue">${item.venue}</span>
+        <span class="service-year">${item.year}</span>
     `;
     
     return div;

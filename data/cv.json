@@ -72,5 +72,12 @@
       "date": "Apr 2019 - Dec 2020",
       "description": "Developed high-performance Python API for LightDB, accelerating query speed for VR/AR video data. Optimized API mapping to low-level constructs, reducing device transfer time. Created Maimon, a pioneering system for discovering approximate MultiValued Dependencies using information theory (ACM SIGMOD 2020)."
     }
+  ],
+  "service": [
+    {
+      "role": "Program Committee Reviewer",
+      "venue": "Example Conference 2025",
+      "year": "2025"
+    }
   ]
 }

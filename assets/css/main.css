@@ -949,6 +949,74 @@ nav {
 .cv-item:nth-child(4) { animation-delay: 0.4s; }
 .cv-item:nth-child(5) { animation-delay: 0.5s; }
 
+/* ---------- CV Service Section ---------- */
+.cv-service-section {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border);
+}
+
+.cv-service-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space-md);
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  animation: fadeUp 0.5s var(--ease-out) forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.service-role {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.service-venue {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.service-year {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .service-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+    text-align: left;
+  }
+  
+  .service-year {
+    justify-self: start;
+  }
+}
+
 /* ---------- Teaching ---------- */
 .teaching-section {
   background: var(--bg-secondary);

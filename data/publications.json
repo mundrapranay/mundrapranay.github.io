@@ -1,4 +1,15 @@
 [
+  
+  {
+    "id": "seda",
+    "title": "Practical and Accurate Local Edge Differentially Private Graph Algorithms",
+    "authors": ["Pranay Mundra", "Daniel Kocher", "Martin Schäler", "Nikolaus Augsten"],
+    "venue": "Very Large Data Bases (VLDB)",
+    "year": 2026, 
+    "date": "",
+    "paperurl": "",
+    "github": ""
+  },
   {
     "id": "ledp",
     "title": "Practical and Accurate Local Edge Differentially Private Graph Algorithms",
@@ -7,8 +18,7 @@
     "year": 2025,
     "date": "2025-07-01",
     "paperurl": "https://arxiv.org/abs/2506.20828",
-    "github": "https://zenodo.org/records/15741880",
-    "abstract": "The rise of massive networks across diverse domains necessitates sophisticated graph analytics, often involving sensitive data and raising privacy concerns. This paper addresses these challenges using local differential privacy (LDP), which enforces privacy at the individual level, where no third-party entity is trusted, unlike centralized models that assume a trusted curator."
+    "github": "https://zenodo.org/records/15741880"
   },
   {
     "id": "aqp",
@@ -18,8 +28,7 @@
     "year": 2023,
     "date": "2023-06-18",
     "paperurl": "https://dl.acm.org/doi/pdf/10.1145/3597465.3605227",
-    "github": "",
-    "abstract": "Open knowledge, including open data and publicly available knowledge bases, offers a rich opportunity for data scientists for analysis and query answering, but comes with big obstacles due to the diverse, noisy, and incomplete nature of its data ecosystem."
+    "github": ""
   },
   {
     "id": "koios",
@@ -29,8 +38,7 @@
     "year": 2023,
     "date": "2023-04-03",
     "paperurl": "https://arxiv.org/pdf/2304.10572",
-    "github": "",
-    "abstract": "We study the top-k set similarity search problem using semantic overlap. While vanilla overlap requires exact matches between set elements, semantic overlap allows elements that are syntactically different but semantically related to increase the overlap."
+    "github": ""
   },
   {
     "id": "maimon",
@@ -40,8 +48,7 @@
     "year": 2020,
     "date": "2020-06-11",
     "paperurl": "https://dl.acm.org/doi/pdf/10.1145/3318464.3380573",
-    "github": "",
-    "abstract": "Acyclic schemes have numerous applications in databases and in machine learning, such as improved design, more efficient storage, and increased performance for queries and machine learning algorithms."
+    "github": ""
   },
   {
     "id": "treesmu",
@@ -51,7 +58,6 @@
     "year": 2019,
     "date": "2019-11-05",
     "paperurl": "https://arxiv.org/pdf/1911.01545",
-    "github": "",
-    "abstract": "We study compositional generalization, viz., the problem of zero-shot generalization to novel compositions of concepts in a domain. We propose Tree Stack Memory Units (Tree-SMU) to enable strong compositional generalization."
+    "github": ""
   }
 ]
