@@ -2,7 +2,7 @@
   
   {
     "id": "seda",
-    "title": "Practical and Accurate Local Edge Differentially Private Graph Algorithms",
+    "title": "SeDa: Bridging the Gap between Efficient Syntactic and Precise Semantic Search of Similar Passages in Large Text Corpora",
     "authors": ["Pranay Mundra", "Daniel Kocher", "Martin Schäler", "Nikolaus Augsten"],
     "venue": "Very Large Data Bases (VLDB)",
     "year": 2026, 
