@@ -8,7 +8,8 @@
     "year": 2026, 
     "date": "",
     "paperurl": "",
-    "github": ""
+    "github": "",
+    "slides": ""
   },
   {
     "id": "ledp",
@@ -18,7 +19,8 @@
     "year": 2025,
     "date": "2025-07-01",
     "paperurl": "https://arxiv.org/abs/2506.20828",
-    "github": "https://zenodo.org/records/15741880"
+    "github": "https://zenodo.org/records/15741880",
+    "slides": "files/VLDB2025_Slides.pdf"
   },
   {
     "id": "aqp",
@@ -28,7 +30,8 @@
     "year": 2023,
     "date": "2023-06-18",
     "paperurl": "https://dl.acm.org/doi/pdf/10.1145/3597465.3605227",
-    "github": ""
+    "github": "",
+    "slides": ""
   },
   {
     "id": "koios",
@@ -38,7 +41,8 @@
     "year": 2023,
     "date": "2023-04-03",
     "paperurl": "https://arxiv.org/pdf/2304.10572",
-    "github": ""
+    "github": "",
+    "slides": ""
   },
   {
     "id": "maimon",
@@ -48,7 +52,8 @@
     "year": 2020,
     "date": "2020-06-11",
     "paperurl": "https://dl.acm.org/doi/pdf/10.1145/3318464.3380573",
-    "github": ""
+    "github": "",
+    "slides": ""
   },
   {
     "id": "treesmu",
@@ -58,6 +63,7 @@
     "year": 2019,
     "date": "2019-11-05",
     "paperurl": "https://arxiv.org/pdf/1911.01545",
-    "github": ""
+    "github": "",
+    "slides": ""
   }
 ]

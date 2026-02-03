@@ -760,6 +760,25 @@ nav {
   height: 14px;
 }
 
+.publication-slides {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-left: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.publication-slides:hover {
+  color: var(--accent);
+}
+
+.publication-slides svg {
+  width: 14px;
+  height: 14px;
+}
+
 /* ---------- CV Section - Grid Layout ---------- */
 .cv-section {
   padding: var(--space-lg) 0;
