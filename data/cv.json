@@ -82,6 +82,16 @@
   ],
   "service": [
     {
+      "role": "Main Track Reviewer",
+      "venue": "NeurIPS 2027",
+      "year": "2027"
+    },
+    {
+      "role": "Main Track Reviewer",
+      "venue": "ICML 2026",
+      "year": "2026"
+    },
+    {
       "role": "Artifact Evaluation Committee Reviewer",
       "venue": "ALENEX 2026",
       "year": "2026"
