@@ -82,6 +82,11 @@
   ],
   "service": [
     {
+      "role": "Reviewer",
+      "venue": "IEEE Transactions on Dependable and Secure Computing",
+      "year": "2027-Present"
+    },
+    {
       "role": "Main Track Reviewer",
       "venue": "NeurIPS 2027",
       "year": "2027"
