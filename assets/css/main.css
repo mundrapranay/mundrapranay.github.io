@@ -453,7 +453,9 @@ nav {
 }
 
 .hero h1 {
-  margin-bottom: 0.5rem;
+  font-size: clamp(2.5rem, 5vw, 3.9rem);
+  line-height: 1.1;
+  margin-bottom: 0.85rem;
 }
 
 .hero h1 .highlight {
@@ -464,10 +466,10 @@ nav {
 
 .hero-subtitle {
   font-family: var(--font-body);
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  font-weight: 500;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  font-weight: 400;
   color: var(--text-secondary);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
   letter-spacing: 0;
 }
 
