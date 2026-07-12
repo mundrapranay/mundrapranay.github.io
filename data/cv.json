@@ -31,6 +31,13 @@
   ],
   "experience": [
     {
+      "title": "Applied Researcher Intern",
+      "institution": "eBay",
+      "location": "",
+      "date": "2025 - Present",
+      "description": "Engineering distributed graph neural network training over large user-behavior graphs for recommendation, focusing on sparse representations, latency, throughput, and convergence."
+    },
+    {
       "title": "Graduate Research Assistant",
       "institution": "Yale University",
       "location": "New Haven, CT",
@@ -88,8 +95,8 @@
     },
     {
       "role": "Main Track Reviewer",
-      "venue": "NeurIPS 2027",
-      "year": "2027"
+      "venue": "NeurIPS 2026",
+      "year": "2026"
     },
     {
       "role": "Main Track Reviewer",

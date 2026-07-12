@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Pranay Mundra</title>
-    <meta name="description" content="Curriculum Vitae of Pranay Mundra - PhD Student at Yale CS">
+    <title>CV — Pranay Mundra</title>
+    <meta name="description" content="Curriculum vitae of Pranay Mundra — Yale CS Ph.D. candidate and eBay applied researcher in algorithms, differential privacy, and distributed systems.">
+    <link rel="canonical" href="https://mundrapranay.github.io/cv.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="CV — Pranay Mundra">
+    <meta property="og:description" content="Curriculum vitae of Pranay Mundra — Yale CS Ph.D. candidate and eBay applied researcher in algorithms, differential privacy, and distributed systems.">
+    <meta property="og:url" content="https://mundrapranay.github.io/cv.html">
+    <meta property="og:image" content="https://mundrapranay.github.io/assets/images/profile.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CV — Pranay Mundra">
+    <meta name="twitter:description" content="Curriculum vitae of Pranay Mundra — Yale CS Ph.D. candidate and eBay applied researcher in algorithms, differential privacy, and distributed systems.">
+    <meta name="twitter:image" content="https://mundrapranay.github.io/assets/images/profile.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,9 +27,7 @@
         <div class="header-content">
             <a href="index.html" class="logo">PM</a>
             <nav>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">About</a></li>
-                </ul>
+                <ul class="nav-links" id="nav-links"></ul>
                 <button class="theme-toggle" aria-label="Toggle dark mode">
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -42,15 +52,13 @@
             </nav>
         </div>
         <div class="mobile-nav" id="mobile-nav">
-            <ul id="mobile-nav-links">
-                <li><a href="index.html">About</a></li>
-            </ul>
+            <ul id="mobile-nav-links"></ul>
             <div class="mobile-nav-footer">
                 <div class="mobile-nav-socials" id="mobile-socials"></div>
             </div>
         </div>
     </header>
-    
+
     <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
 
     <!-- CV Section - Compact Grid -->
@@ -72,22 +80,144 @@
                 <div class="cv-column">
                     <h2>Education</h2>
                     <div id="cv-education">
-                        <!-- Loaded dynamically -->
+                        <div class="cv-item">
+                            <div class="cv-item-date">2024 - Present</div>
+                            <div class="cv-item-title">PhD in Computer Science</div>
+                            <div class="cv-item-org">Yale University, New Haven, CT</div>
+                        </div>
+                        <div class="cv-item">
+                            <div class="cv-item-date">2024 - 2026</div>
+                            <div class="cv-item-title">M.Phil. in Computer Science</div>
+                            <div class="cv-item-org">Yale University, New Haven, CT</div>
+                        </div>
+                        <div class="cv-item">
+                            <div class="cv-item-date">2021 - 2023</div>
+                            <div class="cv-item-title">M.Sc. in Computer Science</div>
+                            <div class="cv-item-org">University of Rochester, Rochester, NY</div>
+                        </div>
+                        <div class="cv-item">
+                            <div class="cv-item-date">2017 - 2021</div>
+                            <div class="cv-item-title">B.Sc. in Mathematics</div>
+                            <div class="cv-item-org">University of Washington, Seattle, WA</div>
+                        </div>
                     </div>
                 </div>
                 <div class="cv-column">
                     <h2>Experience</h2>
                     <div id="cv-experience">
-                        <!-- Loaded dynamically -->
+                        <div class="cv-card">
+                            <div class="cv-card-header">
+                                <div>
+                                    <div class="cv-card-title">Applied Researcher Intern</div>
+                                    <div class="cv-card-org">eBay</div>
+                                </div>
+                                <span class="cv-card-date">2025 - Present</span>
+                            </div>
+                            <div class="cv-card-desc">Engineering distributed graph neural network training over large user-behavior graphs for recommendation, focusing on sparse representations, latency, throughput, and convergence.</div>
+                        </div>
+                        <div class="cv-card">
+                            <div class="cv-card-header">
+                                <div>
+                                    <div class="cv-card-title">Graduate Research Assistant</div>
+                                    <div class="cv-card-org">Yale University · New Haven, CT</div>
+                                </div>
+                                <span class="cv-card-date">Aug 2024 - Present</span>
+                            </div>
+                            <div class="cv-card-desc">Developed the first distributed LEDP k-core and triangle counting algorithms under Local Edge Differential Privacy (LEDP), leveraging input-sensitive graph properties to tighten utility bounds—achieving ≤3x error for k-core vs. 131x baseline and up to six orders of magnitude reduction in triangle counting error on billion-edge graphs. Published in ACM VLDB 2025.</div>
+                        </div>
+                        <div class="cv-card">
+                            <div class="cv-card-header">
+                                <div>
+                                    <div class="cv-card-title">Research Data Engineer II</div>
+                                    <div class="cv-card-org">University of Rochester Medical Center · Rochester, NY</div>
+                                </div>
+                                <span class="cv-card-date">Jan 2024 - Aug 2024</span>
+                            </div>
+                            <div class="cv-card-desc">Developed intelligent storage solutions for large sequencing data in the MicroRNA project, optimizing data retrieval for faster analysis. Led the creation of an open-source end-to-end software for microglia image analysis, packaging research ideas into accessible software.</div>
+                        </div>
+                        <div class="cv-card">
+                            <div class="cv-card-header">
+                                <div>
+                                    <div class="cv-card-title">Graduate Summer Researcher</div>
+                                    <div class="cv-card-org">MIT CSAIL — Parallel Computing Group · Remote</div>
+                                </div>
+                                <span class="cv-card-date">Jun 2023 - Aug 2023</span>
+                            </div>
+                            <div class="cv-card-desc">Implemented a benchmark suite for privacy-preserving locally adjustable graph algorithms in parallel and distributed settings. Advised by Quanquan C. Liu & Julian Shun.</div>
+                        </div>
+                        <div class="cv-card">
+                            <div class="cv-card-header">
+                                <div>
+                                    <div class="cv-card-title">Graduate Summer Researcher</div>
+                                    <div class="cv-card-org">Paris Lodron Universität Salzburg · Salzburg, Austria</div>
+                                </div>
+                                <span class="cv-card-date">Jun 2023 - Aug 2023</span>
+                            </div>
+                            <div class="cv-card-desc">Developed an alignment algorithm for dynamic bipartite graph matching, uncovering language patterns and semantic similarities in biblical texts across languages and epochs. Collaborated with linguists to integrate NLP and set similarity search into the BOSS project. Under review for VLDB 2026.</div>
+                        </div>
+                        <div class="cv-card">
+                            <div class="cv-card-header">
+                                <div>
+                                    <div class="cv-card-title">Graduate Research Assistant</div>
+                                    <div class="cv-card-org">University of Rochester · Rochester, NY</div>
+                                </div>
+                                <span class="cv-card-date">Jul 2021 - May 2023</span>
+                            </div>
+                            <div class="cv-card-desc">Developed KOIOS, a novel filter verification system for top-k set similarity search using semantic overlap, achieving 5.5x enhanced performance (IEEE ICDE 2023). Created fair coreset selection algorithm with 400x speedup, obtaining 70% accuracy with only 24% data. Worked on Quok for approximate query answering over Open Knowledge (HILDA 2023).</div>
+                        </div>
+                        <div class="cv-card">
+                            <div class="cv-card-header">
+                                <div>
+                                    <div class="cv-card-title">Undergraduate ML Researcher</div>
+                                    <div class="cv-card-org">Caltech — Anima AI Lab · Pasadena, CA</div>
+                                </div>
+                                <span class="cv-card-date">Jun 2020 - Apr 2021</span>
+                            </div>
+                            <div class="cv-card-desc">Developed Tree Stack Memory Units (Tree-SMU), a novel recursive neural network architecture for compositional generalization in mathematical reasoning. Evaluated on four compositionality tests, consistently outperforming transformers, tree transformers, and Tree-LSTMs. (arXiv Preprint)</div>
+                        </div>
+                        <div class="cv-card">
+                            <div class="cv-card-header">
+                                <div>
+                                    <div class="cv-card-title">Undergraduate Research Assistant</div>
+                                    <div class="cv-card-org">University of Washington — Database Group · Seattle, WA</div>
+                                </div>
+                                <span class="cv-card-date">Apr 2019 - Dec 2020</span>
+                            </div>
+                            <div class="cv-card-desc">Developed high-performance Python API for LightDB, accelerating query speed for VR/AR video data. Optimized API mapping to low-level constructs, reducing device transfer time. Created Maimon, a pioneering system for discovering approximate MultiValued Dependencies using information theory (ACM SIGMOD 2020).</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Service Section -->
             <div class="cv-service-section">
                 <h2>Service</h2>
                 <div class="service-list" id="cv-service">
-                    <!-- Loaded dynamically -->
+                    <div class="service-item">
+                        <span class="service-role">Reviewer</span>
+                        <span class="service-venue">IEEE Transactions on Dependable and Secure Computing</span>
+                        <span class="service-year">2027-Present</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-role">Main Track Reviewer</span>
+                        <span class="service-venue">NeurIPS 2026</span>
+                        <span class="service-year">2026</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-role">Main Track Reviewer</span>
+                        <span class="service-venue">ICML 2026</span>
+                        <span class="service-year">2026</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-role">Artifact Evaluation Committee Reviewer</span>
+                        <span class="service-venue">ALENEX 2026</span>
+                        <span class="service-year">2026</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-role">Progam Committee Reviewer</span>
+                        <span class="service-venue">Workshop on Reliable ML (NEURIPS 2025)</span>
+                        <span class="service-year">2025</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -100,7 +230,36 @@
                 <h2>Technical Skills</h2>
             </div>
             <div class="skills-grid" id="skills-grid">
-                <!-- Loaded dynamically -->
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Rust</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Research Areas</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Differential Privacy</span>
+                        <span class="skill-tag">Distributed Algorithms</span>
+                        <span class="skill-tag">Graph Theory</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Database Systems</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools &amp; Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">LaTeX</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -110,7 +269,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-links" id="footer-links"></div>
-                <p>&copy; <span id="year"></span> Pranay Mundra</p>
+                <p>&copy; <span id="year"></span> Pranay Mundra. Built with care.</p>
             </div>
         </div>
     </footer>
