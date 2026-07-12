@@ -1,11 +1,11 @@
 {
   "title": "Pranay Mundra",
-  "description": "PhD Student at Yale CS",
+  "description": "Ph.D. candidate at Yale and Applied Researcher Intern at eBay working on algorithms, differential privacy, distributed and high-performance computing, and ML systems.",
   "author": {
     "name": "Pranay Mundra",
     "avatar": "assets/images/profile.png",
-    "bio": "PhD Student at Yale CS",
-    "employer": "Yale University",
+    "bio": "Ph.D. candidate at Yale · Applied Researcher Intern at eBay. Algorithms, differential privacy, distributed & high-performance computing, ML systems.",
+    "employer": "eBay",
     "location": "New Haven, CT",
     "email": "pranay.mundra@yale.edu",
     "social": {
@@ -18,8 +18,10 @@
     }
   },
   "navigation": [
+    { "title": "Work", "url": "work.html" },
     { "title": "Publications", "url": "publications.html" },
-    { "title": "Teaching", "url": "teaching.html" },
+    { "title": "Experience", "url": "experience.html" },
+    { "title": "Writing", "url": "writing.html" },
     { "title": "CV", "url": "cv.html" }
   ]
 }
