@@ -1,0 +1,12 @@
+{
+  "intro": "Short technical notes on algorithms, privacy, and systems. First posts are on the way.",
+  "posts": [],
+  "planned": [
+    "What learning-augmented algorithms optimize for",
+    "Why graph degeneracy improves private graph analytics",
+    "Building and evaluating distributed graph algorithms",
+    "A practical introduction to limit-order books from a systems perspective",
+    "CUDA performance lessons from scientific computing",
+    "How to evaluate a backtest without fooling yourself"
+  ]
+}
