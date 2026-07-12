@@ -1,12 +1,12 @@
 {
-  "intro": "Short technical notes on algorithms, privacy, and systems. First posts are on the way.",
-  "posts": [],
-  "planned": [
-    "What learning-augmented algorithms optimize for",
-    "Why graph degeneracy improves private graph analytics",
-    "Building and evaluating distributed graph algorithms",
-    "A practical introduction to limit-order books from a systems perspective",
-    "CUDA performance lessons from scientific computing",
-    "How to evaluate a backtest without fooling yourself"
-  ]
+  "intro": "Plain-language summaries of my research — the key idea behind each paper, without the notation.",
+  "posts": [
+    { "slug": "ledp", "title": "Measuring a social network without learning who knows whom", "paper": "Practical and Accurate Local Edge Differentially Private Graph Algorithms", "venue": "VLDB 2025", "url": "https://arxiv.org/abs/2506.20828" },
+    { "slug": "lapras", "title": "Spending a privacy budget wisely when you can guess what's coming", "paper": "LAPRAS: Learning-Augmented Private Online Analytics", "venue": "ICML 2026", "url": "" },
+    { "slug": "seda", "title": "Finding passages that mean the same thing across millions of texts", "paper": "SeDa: Bridging the Gap between Efficient Syntactic and Precise Semantic Search of Similar Passages in Large Text Corpora", "venue": "VLDB 2026", "url": "https://www.vldb.org/pvldb/vol19/p1332-mundra.pdf" },
+    { "slug": "koios", "title": "Finding the most similar datasets — exactly, and fast", "paper": "KOIOS: Top-K Semantic Overlap Set Search", "venue": "ICDE 2023", "url": "https://arxiv.org/pdf/2304.10572" },
+    { "slug": "maimon", "title": "Discovering the hidden structure inside messy tables", "paper": "Mining Approximate Acyclic Schemas from Relations", "venue": "SIGMOD 2020", "url": "https://dl.acm.org/doi/pdf/10.1145/3318464.3380573" },
+    { "slug": "aqp", "title": "Answering questions over data that's full of holes", "paper": "Approximate Query Answering over Open Data", "venue": "HILDA 2023", "url": "https://dl.acm.org/doi/pdf/10.1145/3597465.3605227" }
+  ],
+  "planned": []
 }
