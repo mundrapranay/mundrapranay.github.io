@@ -1,0 +1,23 @@
+[
+  { "org": "eBay", "role": "Applied Researcher Intern", "date": "2025 – present",
+    "story": "Engineering distributed graph neural network training over large user-behavior graphs for recommendation, focusing on sparse representations, latency, throughput, and convergence.",
+    "link": "work.html#ebay", "linkText": "Project" },
+  { "org": "Yale University", "role": "Graduate Research Assistant", "date": "2023 – present",
+    "story": "Designed distributed local edge-DP algorithms for k-core decomposition and triangle counting, and developed LAPRAS, a learning-augmented framework for private online query answering.",
+    "link": "work.html#ledp", "linkText": "Project" },
+  { "org": "MIT CSAIL", "role": "Graduate Summer Researcher", "date": "2023",
+    "story": "Built a benchmark suite for privacy-preserving graph algorithms in parallel and distributed settings, evaluating accuracy, runtime, scalability, and communication trade-offs.",
+    "link": "", "linkText": "" },
+  { "org": "University of Rochester Medical Center", "role": "Research Data Engineer II", "date": "2021 – 2022",
+    "story": "Built storage and retrieval workflows for large sequencing datasets and led open-source software for reproducible microglia image analysis.",
+    "link": "", "linkText": "" },
+  { "org": "University of Rochester", "role": "Graduate Research Assistant", "date": "2020 – 2022",
+    "story": "Built KOIOS, an exact top-k semantic set-search system (5.5× speedup, ICDE 2023), and designed a fair coreset-selection method with a 400× speedup retaining 70% accuracy on 24% of the data.",
+    "link": "work.html#koios", "linkText": "Project" },
+  { "org": "Caltech", "role": "Undergraduate ML Researcher", "date": "2019",
+    "story": "Co-developed Tree Stack Memory Units for compositional generalization in mathematical reasoning, outperforming Transformer, Tree Transformer, and Tree-LSTM baselines.",
+    "link": "work.html#treesmu", "linkText": "Project" },
+  { "org": "University of Washington", "role": "Undergraduate Research Assistant", "date": "2017 – 2020",
+    "story": "Built a high-performance Python/Boost.Python interface for LightDB and developed information-theoretic pruning for approximate dependency discovery (SIGMOD 2020).",
+    "link": "publications.html#maimon", "linkText": "Paper" }
+]

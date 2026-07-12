@@ -1376,3 +1376,15 @@ footer p {
 }
 .case-venue { font-weight: 600; color: var(--text-primary); }
 .btn-sm { padding: 0.35rem 0.8rem; font-size: 0.8rem; }
+
+/* ---------- Experience timeline ---------- */
+.timeline { list-style: none; border-left: 2px solid var(--border); margin-left: 0.5rem; padding-left: var(--space-sm); }
+.timeline-item { position: relative; padding-bottom: var(--space-md); }
+.timeline-item::before {
+  content: ""; position: absolute; left: calc(-1 * var(--space-sm) - 6px); top: 0.4rem;
+  width: 10px; height: 10px; border-radius: 50%; background: var(--accent);
+}
+.timeline-date { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+.timeline-body h3 { margin-bottom: 0.3rem; }
+.timeline-body a { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); }
+.btn-sm { padding: 0.35rem 0.8rem; font-size: 0.8rem; }
