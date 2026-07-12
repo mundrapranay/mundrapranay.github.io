@@ -430,8 +430,8 @@ nav {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: var(--space-md);
+  grid-template-columns: 360px 1fr;
+  gap: var(--space-lg);
   align-items: center;
 }
 
@@ -453,8 +453,8 @@ nav {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.9rem);
-  line-height: 1.1;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  line-height: 1.2;
   margin-bottom: 0.85rem;
 }
 
@@ -1413,22 +1413,9 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .themes-section { background: var(--bg-primary);   border-top: 1px solid var(--border); }
 .selected-pubs  { background: var(--bg-secondary); border-top: 1px solid var(--border); }
 
-/* Hero: constrain copy width + subtle technical dot-grid motif */
-.hero { position: relative; overflow: hidden; }
-.hero::before {
-  content: "";
-  position: absolute; inset: 0;
-  background-image: radial-gradient(var(--border) 1px, transparent 1px);
-  background-size: 26px 26px;
-  -webkit-mask-image: radial-gradient(ellipse 65% 60% at 72% 42%, #000 0%, transparent 72%);
-          mask-image: radial-gradient(ellipse 65% 60% at 72% 42%, #000 0%, transparent 72%);
-  opacity: 0.55;
-  pointer-events: none;
-  z-index: 0;
-}
-.hero .container { position: relative; z-index: 1; }
-.hero-text { max-width: 660px; }
-.hero-subtitle { max-width: 48ch; }
+/* Hero: constrain copy width, clean (no motif) */
+.hero-text { max-width: 720px; }
+.hero-subtitle { max-width: 52ch; }
 .hero-image img { object-position: center; }
 
 /* Five research themes in a single roomy row */
