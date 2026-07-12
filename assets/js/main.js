@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initScrollEffects();
     initAnimations();
-    loadPageContent();
-    document.getElementById('year').textContent = new Date().getFullYear();
+    initPublicationFilters();
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
 /* ---------- Theme Toggle ---------- */
@@ -236,408 +237,36 @@ function initAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                
+
                 // Animate skill bars
                 if (entry.target.classList.contains('skill-progress')) {
                     entry.target.classList.add('animated');
-                }
-                
-                // Animate counters
-                if (entry.target.classList.contains('stat-number')) {
-                    animateCounter(entry.target);
                 }
             }
         });
     }, observerOptions);
 
     // Observe elements
-    document.querySelectorAll('.animate-on-scroll, .timeline-content, .skill-progress, .stat-number').forEach(el => {
+    document.querySelectorAll('.animate-on-scroll, .timeline-content, .skill-progress').forEach(el => {
         observer.observe(el);
     });
 }
 
-function animateCounter(element) {
-    const target = parseInt(element.getAttribute('data-count'), 10);
-    const duration = 1500;
-    const start = 0;
-    const startTime = performance.now();
-    
-    function update(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        
-        // Ease out
-        const easeOut = 1 - Math.pow(1 - progress, 3);
-        const current = Math.floor(start + (target - start) * easeOut);
-        
-        element.textContent = current;
-        
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        } else {
-            element.textContent = target;
-        }
-    }
-    
-    requestAnimationFrame(update);
-}
+/* ---------- Publication tag filters ---------- */
+function initPublicationFilters() {
+    const filters = document.querySelectorAll('.pub-filter');
+    const items = document.querySelectorAll('.pub-item');
+    if (!filters.length || !items.length) return;
 
-/* ---------- Load Page Content ---------- */
-function loadPageContent() {
-    const path = window.location.pathname;
-    
-    if (path === '/' || path.includes('index.html') || path.endsWith('/')) {
-        loadHomePage();
-    } else if (path.includes('publications')) {
-        loadPublications();
-    } else if (path.includes('teaching')) {
-        loadTeaching();
-    } else if (path.includes('cv')) {
-        loadCV();
-    }
-}
-
-/* ---------- Home Page ---------- */
-async function loadHomePage() {
-    try {
-        // Load site data for socials
-        const siteResponse = await fetch('data/site.json');
-        const siteData = await siteResponse.json();
-        
-        // Add hero social links
-        const heroSocials = document.getElementById('hero-socials');
-        if (heroSocials && siteData.author && siteData.author.social) {
-            const social = siteData.author.social;
-            
-            const socialIcons = {
-                email: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>`,
-                github: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>`,
-                twitter: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>`,
-                linkedin: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>`,
-                googlescholar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>`
-            };
-            
-            const socialUrls = {
-                email: (val) => `mailto:${val}`,
-                github: (val) => `https://github.com/${val}`,
-                twitter: (val) => `https://twitter.com/${val}`,
-                linkedin: (val) => `https://www.linkedin.com/in/${val}`,
-                googlescholar: (val) => val
-            };
-            
-            ['email', 'github', 'linkedin', 'twitter', 'googlescholar'].forEach(key => {
-                if (social[key]) {
-                    const a = document.createElement('a');
-                    a.href = socialUrls[key](social[key]);
-                    a.target = key !== 'email' ? '_blank' : '';
-                    a.rel = key !== 'email' ? 'noopener noreferrer' : '';
-                    a.setAttribute('aria-label', key);
-                    a.innerHTML = socialIcons[key];
-                    heroSocials.appendChild(a);
-                }
+    filters.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filters.forEach(f => f.classList.remove('is-active'));
+            btn.classList.add('is-active');
+            const tag = btn.getAttribute('data-tag');
+            items.forEach(item => {
+                const tags = (item.getAttribute('data-tags') || '').split(',');
+                item.hidden = !(tag === 'all' || tags.includes(tag));
             });
-        }
-        
-        // Load about content
-        const aboutResponse = await fetch('data/about.json');
-        const aboutData = await aboutResponse.json();
-        
-        const aboutText = document.getElementById('about-text');
-        if (aboutText) {
-            // Add intro paragraph
-            if (aboutData.intro) {
-                const p = document.createElement('p');
-                p.innerHTML = parseMarkdown(aboutData.intro);
-                aboutText.appendChild(p);
-            }
-            
-            // Add all sections
-            if (aboutData.sections) {
-                aboutData.sections.forEach(section => {
-                    const h3 = document.createElement('h3');
-                    h3.textContent = section.title;
-                    aboutText.appendChild(h3);
-                    
-                    if (section.content) {
-                        section.content.forEach(paragraph => {
-                            const p = document.createElement('p');
-                            p.innerHTML = parseMarkdown(paragraph);
-                            aboutText.appendChild(p);
-                        });
-                    }
-                });
-            }
-        }
-
-        // Load skills
-        await loadSkills();
-        
-        // Load featured publications (first 3)
-        const pubResponse = await fetch('data/publications.json');
-        const publications = await pubResponse.json();
-        
-        const featuredPubs = document.getElementById('featured-publications');
-        if (featuredPubs) {
-            publications.sort((a, b) => (b.year || 0) - (a.year || 0));
-            publications.slice(0, 3).forEach((pub, index) => {
-                featuredPubs.appendChild(createPublicationItem(pub, index));
-            });
-        }
-
-        // Re-init animations for new content
-        initAnimations();
-    } catch (error) {
-        console.error('Error loading home page:', error);
-    }
-}
-
-/* ---------- Skills ---------- */
-async function loadSkills() {
-    try {
-        const response = await fetch('data/skills.json');
-        const data = await response.json();
-        
-        const skillsGrid = document.getElementById('skills-grid');
-        if (!skillsGrid || !data.categories) return;
-        
-        data.categories.forEach((category, catIndex) => {
-            const categoryDiv = document.createElement('div');
-            categoryDiv.className = 'skill-category animate-on-scroll';
-            categoryDiv.style.transitionDelay = `${catIndex * 0.1}s`;
-            
-            const h3 = document.createElement('h3');
-            h3.textContent = category.name;
-            categoryDiv.appendChild(h3);
-            
-            const tagsDiv = document.createElement('div');
-            tagsDiv.className = 'skill-tags';
-            
-            category.skills.forEach(skill => {
-                const tag = document.createElement('span');
-                tag.className = 'skill-tag';
-                tag.textContent = skill.name;
-                tagsDiv.appendChild(tag);
-            });
-            
-            categoryDiv.appendChild(tagsDiv);
-            skillsGrid.appendChild(categoryDiv);
         });
-    } catch (error) {
-        console.error('Error loading skills:', error);
-    }
-}
-
-/* ---------- Publications ---------- */
-async function loadPublications() {
-    try {
-        const response = await fetch('data/publications.json');
-        const publications = await response.json();
-        
-        const list = document.getElementById('publications-list');
-        if (!list) return;
-        
-        publications.sort((a, b) => (b.year || 0) - (a.year || 0));
-        
-        publications.forEach((pub, index) => {
-            list.appendChild(createPublicationItem(pub, index));
-        });
-
-        initAnimations();
-    } catch (error) {
-        console.error('Error loading publications:', error);
-    }
-}
-
-function createPublicationItem(pub, index) {
-    const li = document.createElement('li');
-    li.className = 'publication-item animate-on-scroll';
-    li.style.transitionDelay = `${index * 0.05}s`;
-    li.id = pub.id;
-    
-    let html = '';
-    
-    // Title (linked if paperurl exists)
-    html += `<div class="publication-title">`;
-    if (pub.paperurl) {
-        html += `<a href="${pub.paperurl}" target="_blank" rel="noopener noreferrer">${pub.title}</a>`;
-    } else {
-        html += pub.title;
-    }
-    // Code link inline with title
-    if (pub.github) {
-        html += `<a href="${pub.github}" class="publication-code" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
-            code
-        </a>`;
-    }
-    // Slides link inline with title
-    if (pub.slides) {
-        html += `<a href="${pub.slides}" class="publication-slides" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-                <path d="M8 10l3 3 5-6"></path>
-            </svg>
-            slides
-        </a>`;
-    }
-    html += `</div>`;
-    
-    // Authors (bold "Pranay Mundra")
-    if (pub.authors && pub.authors.length > 0) {
-        const authorsFormatted = pub.authors.map(author => 
-            author === 'Pranay Mundra' ? `<strong>${author}</strong>` : author
-        ).join(', ');
-        html += `<div class="publication-authors">${authorsFormatted}</div>`;
-    }
-    
-    // Venue with year
-    if (pub.venue || pub.year) {
-        html += `<div class="publication-venue">`;
-        if (pub.venue) html += pub.venue;
-        if (pub.venue && pub.year) html += ', ';
-        if (pub.year) html += `<span class="publication-year">${pub.year}</span>`;
-        html += `</div>`;
-    }
-    
-    li.innerHTML = html;
-    return li;
-}
-
-/* ---------- Teaching ---------- */
-async function loadTeaching() {
-    try {
-        const response = await fetch('data/teaching.json');
-        const teaching = await response.json();
-        
-        const list = document.getElementById('teaching-list');
-        if (!list) return;
-        
-        teaching.sort((a, b) => (b.year || 0) - (a.year || 0));
-        
-        teaching.forEach((item, index) => {
-            const li = document.createElement('li');
-            li.className = 'teaching-item animate-on-scroll';
-            li.style.transitionDelay = `${index * 0.1}s`;
-            
-            li.innerHTML = `
-                <div class="teaching-icon">📚</div>
-                <div class="teaching-details">
-                    <div class="teaching-course">${item.course}${item.title ? ': ' + item.title : ''}</div>
-                    <div class="teaching-meta">${item.type || ''} • ${item.venue || ''} • ${item.semester || ''} ${item.year || ''}</div>
-                    ${item.description ? `<div class="teaching-description">${item.description}</div>` : ''}
-                </div>
-            `;
-            
-            list.appendChild(li);
-        });
-
-        initAnimations();
-    } catch (error) {
-        console.error('Error loading teaching:', error);
-    }
-}
-
-/* ---------- CV - Grid Layout with Cards ---------- */
-async function loadCV() {
-    try {
-        const response = await fetch('data/cv.json');
-        const data = await response.json();
-        
-        // Load Education (timeline style)
-        const educationContainer = document.getElementById('cv-education');
-        if (educationContainer && data.education) {
-            data.education.forEach((item, index) => {
-                const cvItem = createCVItem(item, index);
-                educationContainer.appendChild(cvItem);
-            });
-        }
-        
-        // Load Experience (card style)
-        const experienceContainer = document.getElementById('cv-experience');
-        if (experienceContainer && data.experience) {
-            data.experience.forEach((item, index) => {
-                const cvCard = createCVCard(item, index);
-                experienceContainer.appendChild(cvCard);
-            });
-        }
-        
-        // Load Service (reviewer roles)
-        const serviceContainer = document.getElementById('cv-service');
-        if (serviceContainer && data.service) {
-            data.service.forEach((item, index) => {
-                const serviceItem = createServiceItem(item, index);
-                serviceContainer.appendChild(serviceItem);
-            });
-        }
-
-        // Load skills
-        await loadSkills();
-        
-        initAnimations();
-    } catch (error) {
-        console.error('Error loading CV:', error);
-    }
-}
-
-// Timeline item for Education
-function createCVItem(item, index) {
-    const div = document.createElement('div');
-    div.className = 'cv-item';
-    div.style.animationDelay = `${index * 0.1}s`;
-    
-    div.innerHTML = `
-        <div class="cv-item-date">${item.date}</div>
-        <div class="cv-item-title">${item.title}</div>
-        <div class="cv-item-org">${item.institution}${item.location ? ', ' + item.location : ''}</div>
-    `;
-    
-    return div;
-}
-
-// Card for Experience
-function createCVCard(item, index) {
-    const div = document.createElement('div');
-    div.className = 'cv-card';
-    div.style.animationDelay = `${index * 0.1}s`;
-    
-    div.innerHTML = `
-        <div class="cv-card-header">
-            <div>
-                <div class="cv-card-title">${item.title}</div>
-                <div class="cv-card-org">${item.institution}${item.location ? ' · ' + item.location : ''}</div>
-            </div>
-            <span class="cv-card-date">${item.date}</span>
-        </div>
-        ${item.description ? `<div class="cv-card-desc">${item.description}</div>` : ''}
-    `;
-    
-    return div;
-}
-
-// Service item (reviewer roles)
-function createServiceItem(item, index) {
-    const div = document.createElement('div');
-    div.className = 'service-item';
-    div.style.animationDelay = `${index * 0.05}s`;
-    
-    div.innerHTML = `
-        <span class="service-role">${item.role}</span>
-        <span class="service-venue">${item.venue}</span>
-        <span class="service-year">${item.year}</span>
-    `;
-    
-    return div;
-}
-
-/* ---------- Utilities ---------- */
-function parseMarkdown(text) {
-    if (!text) return '';
-    return text
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-        .replace(/\*([^*]+)\*/g, '<em>$1</em>');
+    });
 }
