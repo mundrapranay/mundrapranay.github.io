@@ -42,7 +42,7 @@
       "institution": "Yale University",
       "location": "New Haven, CT",
       "date": "Aug 2024 - Present",
-      "description": "Developed the first distributed LEDP k-core and triangle counting algorithms under Local Edge Differential Privacy (LEDP), leveraging input-sensitive graph properties to tighten utility bounds—achieving ≤3x error for k-core vs. 131x baseline and up to six orders of magnitude reduction in triangle counting error on billion-edge graphs. Published in ACM VLDB 2025. Also developed LAPRAS, a learning-augmented framework for private online analytics (ICML 2026)."
+      "description": "Developed the first distributed LEDP k-core and triangle counting algorithms under Local Edge Differential Privacy (LEDP), leveraging input-sensitive graph properties to tighten utility bounds-achieving ≤3x error for k-core vs. 131x baseline and up to six orders of magnitude reduction in triangle counting error on billion-edge graphs. Published in ACM VLDB 2025. Also developed LAPRAS, a learning-augmented framework for private online analytics (ICML 2026)."
     },
     {
       "title": "Research Data Engineer II",
@@ -53,7 +53,7 @@
     },
     {
       "title": "Graduate Summer Researcher",
-      "institution": "MIT CSAIL — Parallel Computing Group",
+      "institution": "MIT CSAIL - Parallel Computing Group",
       "location": "Remote",
       "date": "Jun 2023 - Aug 2023",
       "description": "Implemented a benchmark suite for privacy-preserving locally adjustable graph algorithms in parallel and distributed settings. Advised by Quanquan C. Liu & Julian Shun."
@@ -74,14 +74,14 @@
     },
     {
       "title": "Undergraduate ML Researcher",
-      "institution": "Caltech — Anima AI Lab",
+      "institution": "Caltech - Anima AI Lab",
       "location": "Pasadena, CA",
       "date": "Jun 2020 - Apr 2021",
       "description": "Developed Tree Stack Memory Units (Tree-SMU), a novel recursive neural network architecture for compositional generalization in mathematical reasoning. Evaluated on four compositionality tests, consistently outperforming transformers, tree transformers, and Tree-LSTMs. (arXiv Preprint)"
     },
     {
       "title": "Undergraduate Research Assistant",
-      "institution": "University of Washington — Database Group",
+      "institution": "University of Washington - Database Group",
       "location": "Seattle, WA",
       "date": "Apr 2019 - Dec 2020",
       "description": "Developed high-performance Python API for LightDB, accelerating query speed for VR/AR video data. Optimized API mapping to low-level constructs, reducing device transfer time. Created Maimon, a pioneering system for discovering approximate MultiValued Dependencies using information theory (ACM SIGMOD 2020)."

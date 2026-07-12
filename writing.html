@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Writing — Pranay Mundra</title>
+<title>Writing - Pranay Mundra</title>
 <meta name="description" content="Plain-language summaries of Pranay Mundra's research papers on differential privacy, distributed graph algorithms, semantic search, and data systems.">
 <link rel="canonical" href="https://mundrapranay.github.io/writing.html">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Writing — Pranay Mundra">
+<meta property="og:title" content="Writing - Pranay Mundra">
 <meta property="og:description" content="Plain-language summaries of Pranay Mundra's research papers on differential privacy, distributed graph algorithms, semantic search, and data systems.">
 <meta property="og:url" content="https://mundrapranay.github.io/writing.html">
 <meta property="og:image" content="https://mundrapranay.github.io/assets/images/profile.jpg">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Writing — Pranay Mundra">
+<meta name="twitter:title" content="Writing - Pranay Mundra">
 <meta name="twitter:description" content="Plain-language summaries of Pranay Mundra's research papers on differential privacy, distributed graph algorithms, semantic search, and data systems.">
 <meta name="twitter:image" content="https://mundrapranay.github.io/assets/images/profile.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,14 +49,14 @@
   <div class="container">
     <div class="page-intro animate-on-scroll">
       <h1>Writing</h1>
-      <p>Plain-language summaries of my research — the key idea behind each paper, without the notation.</p>
+      <p>Plain-language summaries of my research - the key idea behind each paper, without the notation.</p>
     </div>
 
     <ol class="note-toc animate-on-scroll">
       <li><a href="#ledp">Measuring a social network without learning who knows whom</a><span>VLDB 2025</span></li>
       <li><a href="#lapras">Spending a privacy budget wisely when you can guess what’s coming</a><span>ICML 2026</span></li>
       <li><a href="#seda">Finding passages that mean the same thing across millions of texts</a><span>VLDB 2026</span></li>
-      <li><a href="#koios">Finding the most similar datasets — exactly, and fast</a><span>ICDE 2023</span></li>
+      <li><a href="#koios">Finding the most similar datasets - exactly, and fast</a><span>ICDE 2023</span></li>
       <li><a href="#maimon">Discovering the hidden structure inside messy tables</a><span>SIGMOD 2020</span></li>
       <li><a href="#aqp">Answering questions over data that’s full of holes</a><span>HILDA 2023</span></li>
     </ol>
@@ -65,9 +65,9 @@
       <span class="note-venue">VLDB 2025</span>
       <h2>Measuring a social network without learning who knows whom</h2>
       <p class="note-paper">On <a href="https://arxiv.org/abs/2506.20828" target="_blank" rel="noopener noreferrer">Practical and Accurate Local Edge Differentially Private Graph Algorithms</a></p>
-      <p>Platforms often want aggregate facts about a network — how tightly knit its communities are (<em>k</em>-core decomposition), or how many mutual-friend triangles it contains. But every edge is itself a private fact: that two specific people are connected. Differential privacy hides individual edges by injecting random noise, and at the scale of billion-edge graphs that noise usually swamps the real signal, leaving answers that are technically private but practically useless.</p>
-      <p>We work under <em>local</em> edge differential privacy, the strong version where each participant perturbs their own connections before anything is pooled — and show you don't have to trade that protection for garbage accuracy. Real graphs have exploitable structure: they're "shallow" in a precise sense (low degeneracy) and most nodes have bounded degree. By calibrating the noise to those structural properties instead of to the worst case, and running the whole thing across many machines, the algorithms stay accurate at scale.</p>
-      <p>The payoff is concrete: on billion-edge graphs, <em>k</em>-core estimates land within about 3× of the truth where prior methods were off by 131×, and triangle-counting error drops by up to six orders of magnitude — strong privacy and usable numbers at the same time.</p>
+      <p>Platforms often want aggregate facts about a network - how tightly knit its communities are (<em>k</em>-core decomposition), or how many mutual-friend triangles it contains. But every edge is itself a private fact: that two specific people are connected. Differential privacy hides individual edges by injecting random noise, and at the scale of billion-edge graphs that noise usually swamps the real signal, leaving answers that are technically private but practically useless.</p>
+      <p>We work under <em>local</em> edge differential privacy, the strong version where each participant perturbs their own connections before anything is pooled - and show you don't have to trade that protection for garbage accuracy. Real graphs have exploitable structure: they're "shallow" in a precise sense (low degeneracy) and most nodes have bounded degree. By calibrating the noise to those structural properties instead of to the worst case, and running the whole thing across many machines, the algorithms stay accurate at scale.</p>
+      <p>The payoff is concrete: on billion-edge graphs, <em>k</em>-core estimates land within about 3× of the truth where prior methods were off by 131×, and triangle-counting error drops by up to six orders of magnitude - strong privacy and usable numbers at the same time.</p>
     </article>
 
     <article class="note animate-on-scroll" id="lapras">
@@ -75,7 +75,7 @@
       <h2>Spending a privacy budget wisely when you can guess what’s coming</h2>
       <p class="note-paper">On LAPRAS: Learning-Augmented Private Online Analytics <em>(paper forthcoming)</em></p>
       <p>When you answer a stream of questions about sensitive data, differential privacy gives you a fixed "budget" of privacy to spend. Every answer costs some of it, and once it's gone you're left returning pure noise. Spend the budget evenly and you waste it on questions nobody cares about; spend it greedily and you may have nothing left for the ones that matter later.</p>
-      <p>In practice we often have a rough forecast of what will be asked — which queries, and how often. LAPRAS is <em>learning-augmented</em>: it takes such a prediction and uses it to allocate the budget adaptively, leaning on the classic Matrix Mechanism to answer correlated queries efficiently. The design goal is a clean guarantee — when the prediction is good, accuracy approaches what you could achieve if you'd known the whole workload in advance; when it's bad, privacy is never compromised and quality only degrades gently.</p>
+      <p>In practice we often have a rough forecast of what will be asked - which queries, and how often. LAPRAS is <em>learning-augmented</em>: it takes such a prediction and uses it to allocate the budget adaptively, leaning on the classic Matrix Mechanism to answer correlated queries efficiently. The design goal is a clean guarantee - when the prediction is good, accuracy approaches what you could achieve if you'd known the whole workload in advance; when it's bad, privacy is never compromised and quality only degrades gently.</p>
       <p>That turns a brittle, all-or-nothing budgeting problem into one that gracefully exploits whatever foresight you have: the upside of planning ahead, without the downside of being wrong.</p>
     </article>
 
@@ -83,36 +83,36 @@
       <span class="note-venue">VLDB 2026</span>
       <h2>Finding passages that mean the same thing across millions of texts</h2>
       <p class="note-paper">On <a href="https://www.vldb.org/pvldb/vol19/p1332-mundra.pdf" target="_blank" rel="noopener noreferrer">SeDa: Bridging the Gap between Efficient Syntactic and Precise Semantic Search of Similar Passages in Large Text Corpora</a></p>
-      <p>Suppose you want to find, across a massive collection of text, the passages that say the same thing as a given one — even when the wording differs through paraphrase, translation, or historical drift. Fast keyword-style (syntactic) search misses meaning; precise semantic comparison captures meaning but is far too slow to run over an entire corpus.</p>
+      <p>Suppose you want to find, across a massive collection of text, the passages that say the same thing as a given one - even when the wording differs through paraphrase, translation, or historical drift. Fast keyword-style (syntactic) search misses meaning; precise semantic comparison captures meaning but is far too slow to run over an entire corpus.</p>
       <p>SeDa bridges the two. It first uses cheap syntactic signals to quickly narrow the corpus down to a small set of plausible candidates, then applies precise semantic verification only to those. The filtering step is built so it never discards a genuine match, so the final results keep the accuracy of semantic search at close to the speed of syntactic search.</p>
-      <p>The result is scalable, accurate similar-passage search — useful anywhere meaning matters more than exact words, from deduplicating large corpora to comparing texts across languages and eras.</p>
+      <p>The result is scalable, accurate similar-passage search - useful anywhere meaning matters more than exact words, from deduplicating large corpora to comparing texts across languages and eras.</p>
     </article>
 
     <article class="note animate-on-scroll" id="koios">
       <span class="note-venue">ICDE 2023</span>
-      <h2>Finding the most similar datasets — exactly, and fast</h2>
+      <h2>Finding the most similar datasets - exactly, and fast</h2>
       <p class="note-paper">On <a href="https://arxiv.org/pdf/2304.10572" target="_blank" rel="noopener noreferrer">KOIOS: Top-K Semantic Overlap Set Search</a></p>
-      <p>Given a set — say, the values in a column — you often want the top-k most similar sets in a huge repository, where "similar" means real semantic overlap rather than identical items. The precise notion of similarity requires solving a matching problem between the two sets' elements: accurate, but expensive to compute for every candidate in a large data lake.</p>
+      <p>Given a set - say, the values in a column - you often want the top-k most similar sets in a huge repository, where "similar" means real semantic overlap rather than identical items. The precise notion of similarity requires solving a matching problem between the two sets' elements: accurate, but expensive to compute for every candidate in a large data lake.</p>
       <p>KOIOS uses a filter–verification strategy. Instead of fully scoring every candidate, it computes cheap upper and lower bounds on the true similarity using bipartite-matching arguments, and uses those bounds to prune the vast majority of candidates that provably can't make the top-k. Only the few survivors get the expensive exact check.</p>
-      <p>Because the bounds are sound, the answers are exact — no approximation — while running about 5.5× faster than prior methods, which makes semantic set search practical over large collections.</p>
+      <p>Because the bounds are sound, the answers are exact - no approximation - while running about 5.5× faster than prior methods, which makes semantic set search practical over large collections.</p>
     </article>
 
     <article class="note animate-on-scroll" id="maimon">
       <span class="note-venue">SIGMOD 2020</span>
       <h2>Discovering the hidden structure inside messy tables</h2>
       <p class="note-paper">On <a href="https://dl.acm.org/doi/pdf/10.1145/3318464.3380573" target="_blank" rel="noopener noreferrer">Mining Approximate Acyclic Schemas from Relations</a></p>
-      <p>Real tables hide structure: some columns effectively determine others, and that structure tells you how to clean, normalize, and query the data. Finding it exactly is combinatorially expensive — and real data is noisy enough that exact dependencies rarely hold in the first place.</p>
+      <p>Real tables hide structure: some columns effectively determine others, and that structure tells you how to clean, normalize, and query the data. Finding it exactly is combinatorially expensive - and real data is noisy enough that exact dependencies rarely hold in the first place.</p>
       <p>This work looks instead for <em>approximate</em> multivalued dependencies and the acyclic schema they imply, using information theory to measure how strongly one set of columns predicts another and to prune the search. Framing dependency discovery in information-theoretic terms lets it tolerate noise and skip huge parts of the search space.</p>
-      <p>The result is a practical way to recover the approximate relational structure of messy data — a building block for data cleaning, schema design, and simply understanding an unfamiliar dataset.</p>
+      <p>The result is a practical way to recover the approximate relational structure of messy data - a building block for data cleaning, schema design, and simply understanding an unfamiliar dataset.</p>
     </article>
 
     <article class="note animate-on-scroll" id="aqp">
       <span class="note-venue">HILDA 2023</span>
       <h2>Answering questions over data that’s full of holes</h2>
       <p class="note-paper">On <a href="https://dl.acm.org/doi/pdf/10.1145/3597465.3605227" target="_blank" rel="noopener noreferrer">Approximate Query Answering over Open Data</a></p>
-      <p>Open datasets and knowledge graphs are incomplete and noisy — facts are missing, inconsistent, or uncertain. Ask an aggregate question ("how many …?") and an exact answer is impossible, because the data simply doesn't contain the whole truth.</p>
+      <p>Open datasets and knowledge graphs are incomplete and noisy - facts are missing, inconsistent, or uncertain. Ask an aggregate question ("how many …?") and an exact answer is impossible, because the data simply doesn't contain the whole truth.</p>
       <p>Rather than pretend the data is complete, this work estimates aggregate answers over open knowledge, reasoning about what's missing to produce useful approximate results instead of misleadingly precise ones.</p>
-      <p>That lets analysts get meaningful, appropriately hedged answers from the kind of imperfect open data that's increasingly common — instead of being blocked by the gaps.</p>
+      <p>That lets analysts get meaningful, appropriately hedged answers from the kind of imperfect open data that's increasingly common - instead of being blocked by the gaps.</p>
     </article>
   </div>
 </section>
