@@ -18,9 +18,7 @@
     }
   },
   "navigation": [
-    { "title": "Work", "url": "work.html" },
     { "title": "Publications", "url": "publications.html" },
-    { "title": "Experience", "url": "experience.html" },
     { "title": "Writing", "url": "writing.html" },
     { "title": "CV", "url": "cv.html" }
   ]

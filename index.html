@@ -85,7 +85,7 @@
                     <h1>I build algorithms and systems that make computation <span class="highlight">private, scalable, and fast</span>.</h1>
                     <p class="hero-subtitle">I turn mathematically rigorous ideas — across privacy, distributed systems, and machine learning — into practical software with measurable performance gains.</p>
                     <div class="hero-cta">
-                        <a href="work.html" class="btn btn-primary">View Selected Work
+                        <a href="publications.html" class="btn btn-primary">View Publications
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                         <a href="files/resume.pdf" class="btn btn-secondary" download>Download Resume</a>
@@ -128,55 +128,63 @@
             </div>
             <div class="themes-grid">
                 <article class="theme-card animate-on-scroll">
+                    <span class="theme-num">01</span>
                     <h3>Differential Privacy</h3>
-                    <p>Algorithms with provable privacy guarantees that stay accurate at scale — local edge-DP graph analytics and learning-augmented private online analytics.</p>
+                    <p>Provable guarantees that protect individuals in a dataset. I design DP algorithms that stay accurate at scale — on billion-edge graphs and streaming queries.</p>
                 </article>
                 <article class="theme-card animate-on-scroll">
+                    <span class="theme-num">02</span>
                     <h3>Distributed Computing</h3>
-                    <p>Parallel and distributed algorithms, communication-aware evaluation, and systems that process billion-edge graphs efficiently.</p>
+                    <p>Splitting work across many machines. I build parallel, communication-aware algorithms that scale to massive graphs.</p>
                 </article>
                 <article class="theme-card animate-on-scroll">
+                    <span class="theme-num">03</span>
                     <h3>ML Systems</h3>
-                    <p>Distributed graph learning and GNN training infrastructure, sparse representations, and performance-oriented model training.</p>
+                    <p>The infrastructure that trains models at scale. I engineer distributed graph-learning and GNN pipelines for recommendation.</p>
                 </article>
                 <article class="theme-card animate-on-scroll">
+                    <span class="theme-num">04</span>
                     <h3>Data Mining</h3>
-                    <p>Semantic set search, coreset selection, and approximate query answering over large, noisy, and incomplete data.</p>
+                    <p>Finding structure in large, messy data. I work on semantic set search, coreset selection, and approximate query answering.</p>
                 </article>
                 <article class="theme-card animate-on-scroll">
+                    <span class="theme-num">05</span>
                     <h3>Database Systems</h3>
-                    <p>Query models, schema and dependency discovery, and high-performance data access over large text and graph corpora.</p>
+                    <p>How data is stored, queried, and discovered. I work on query models, schema and dependency discovery, and high-performance access.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Selected Work Section -->
-    <section class="selected-work section" id="selected-work">
+    <!-- Selected Publications Section -->
+    <section class="selected-pubs section" id="selected-publications">
         <div class="container">
             <div class="skills-header animate-on-scroll">
-                <h2>Selected Work</h2>
-                <p>A few results that show what I build.</p>
+                <h2>Selected Publications</h2>
+                <p>Recent peer-reviewed work.</p>
             </div>
-            <div class="work-preview-grid">
-                <a class="work-card animate-on-scroll" href="work.html#lapras">
-                    <h3>LAPRAS</h3>
-                    <p>Learning-augmented private online analytics: approaches offline utility when workload predictions are accurate, degrading gracefully when they are not.</p>
-                    <span class="work-tags">Online Algorithms · Differential Privacy · Optimization</span>
-                </a>
-                <a class="work-card animate-on-scroll" href="work.html#ledp">
-                    <h3>Local Edge-DP Graph Algorithms</h3>
-                    <p>Distributed private k-core and triangle counting: within 3× error for k-core and up to six orders of magnitude lower triangle-counting error than prior baselines.</p>
-                    <span class="work-tags">Graph Algorithms · Distributed Systems · Privacy</span>
-                </a>
-                <a class="work-card animate-on-scroll" href="work.html#ebay">
-                    <h3>eBay Graph Learning</h3>
-                    <p>Distributed GNN training pipelines over large user-behavior graphs for recommendation, with a focus on sparsity, latency, throughput, and convergence.</p>
-                    <span class="work-tags">GNNs · PyTorch · Distributed ML</span>
-                </a>
-            </div>
+            <ul class="publications-list">
+                <li class="pub-item animate-on-scroll">
+                    <div class="publication-title">LAPRAS: Learning-Augmented Private Online Analytics</div>
+                    <div class="publication-authors"><strong>Pranay Mundra</strong>, Quanquan C. Liu</div>
+                    <div class="publication-venue">International Conference on Machine Learning (ICML), <span class="publication-year">2026</span></div>
+                    <div class="pub-tags">Algorithms · Privacy · ML Systems</div>
+                </li>
+                <li class="pub-item animate-on-scroll">
+                    <div class="publication-title"><a href="https://www.vldb.org/pvldb/vol19/p1332-mundra.pdf" target="_blank" rel="noopener noreferrer">SeDa: Bridging the Gap between Efficient Syntactic and Precise Semantic Search of Similar Passages in Large Text Corpora</a></div>
+                    <div class="publication-authors"><strong>Pranay Mundra</strong>, Daniel Kocher, Martin Schäler, Nikolaus Augsten</div>
+                    <div class="publication-venue">Very Large Data Bases (VLDB), <span class="publication-year">2026</span></div>
+                    <div class="pub-tags">Search · Data Systems · Algorithms</div>
+                </li>
+                <li class="pub-item animate-on-scroll">
+                    <div class="publication-title"><a href="https://arxiv.org/abs/2506.20828" target="_blank" rel="noopener noreferrer">Practical and Accurate Local Edge Differentially Private Graph Algorithms</a></div>
+                    <div class="publication-authors"><strong>Pranay Mundra</strong>, Charalampos Papamanthou, Julian Shun, Quanquan C. Liu</div>
+                    <div class="publication-venue">Very Large Data Bases (VLDB), <span class="publication-year">2025</span></div>
+                    <div class="pub-tags">Privacy · Algorithms · Data Systems</div>
+                </li>
+            </ul>
             <div class="text-center animate-on-scroll" style="margin-top: var(--space-md);">
-                <a href="work.html" class="btn btn-secondary">View All Work</a>
+                <a href="publications.html" class="btn btn-secondary">View All Publications</a>
             </div>
         </div>
     </section>
