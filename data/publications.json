@@ -1,15 +1,27 @@
 [
-  
+  {
+    "id": "lapras",
+    "title": "LAPRAS: Learning-Augmented Private Online Analytics",
+    "authors": ["Pranay Mundra", "Quanquan C. Liu"],
+    "venue": "International Conference on Machine Learning (ICML)",
+    "year": 2026,
+    "paperurl": "",
+    "github": "",
+    "slides": "",
+    "contribution": "Learning-augmented online algorithm that uses workload predictions and adaptive budget allocation to approach offline utility for private analytics.",
+    "tags": ["Algorithms", "Privacy", "ML Systems"]
+  },
   {
     "id": "seda",
     "title": "SeDa: Bridging the Gap between Efficient Syntactic and Precise Semantic Search of Similar Passages in Large Text Corpora",
     "authors": ["Pranay Mundra", "Daniel Kocher", "Martin Schäler", "Nikolaus Augsten"],
     "venue": "Very Large Data Bases (VLDB)",
-    "year": 2026, 
-    "date": "",
+    "year": 2026,
     "paperurl": "",
     "github": "",
-    "slides": ""
+    "slides": "",
+    "contribution": "Combines efficient syntactic filtering with precise semantic verification for scalable similar-passage search over large text corpora.",
+    "tags": ["Search", "Data Systems", "Algorithms"]
   },
   {
     "id": "ledp",
@@ -17,10 +29,11 @@
     "authors": ["Pranay Mundra", "Charalampos Papamanthou", "Julian Shun", "Quanquan C. Liu"],
     "venue": "Very Large Data Bases (VLDB)",
     "year": 2025,
-    "date": "2025-07-01",
     "paperurl": "https://arxiv.org/abs/2506.20828",
     "github": "https://zenodo.org/records/15741880",
-    "slides": "files/VLDB2025_Slides.pdf"
+    "slides": "files/VLDB2025_Slides.pdf",
+    "contribution": "Distributed local edge-DP k-core and triangle counting with input-sensitive accuracy, within 3× error for k-core and orders of magnitude lower triangle error.",
+    "tags": ["Privacy", "Algorithms", "Data Systems"]
   },
   {
     "id": "aqp",
@@ -28,21 +41,23 @@
     "authors": ["Mengqi Zhang", "Pranay Mundra", "Chukwubuikem Chikweze", "Fatemeh Nargesian", "Gerhard Weikum"],
     "venue": "Human-In-Loop Data Analytics (HILDA)",
     "year": 2023,
-    "date": "2023-06-18",
     "paperurl": "https://dl.acm.org/doi/pdf/10.1145/3597465.3605227",
     "github": "",
-    "slides": ""
+    "slides": "",
+    "contribution": "Approximate aggregate query answering over noisy, incomplete open knowledge.",
+    "tags": ["Data Systems", "Algorithms"]
   },
   {
     "id": "koios",
     "title": "KOIOS: Top-K Semantic Overlap Set Search",
     "authors": ["Pranay Mundra", "Jianhao Zhang", "Fatemeh Nargesian", "Nikolaus Augsten"],
-    "venue": "IEEE International Conference on Data Engineering",
+    "venue": "IEEE International Conference on Data Engineering (ICDE)",
     "year": 2023,
-    "date": "2023-04-03",
     "paperurl": "https://arxiv.org/pdf/2304.10572",
     "github": "",
-    "slides": ""
+    "slides": "",
+    "contribution": "Exact top-k semantic set search via bipartite-matching bounds and filter–verification, 5.5× faster than prior methods.",
+    "tags": ["Search", "Algorithms", "Data Systems"]
   },
   {
     "id": "maimon",
@@ -50,10 +65,11 @@
     "authors": ["Batya Kenig", "Pranay Mundra", "Guna Prasaad", "Babak Salimi", "Dan Suciu"],
     "venue": "ACM SIGMOD International Conference on Management of Data",
     "year": 2020,
-    "date": "2020-06-11",
     "paperurl": "https://dl.acm.org/doi/pdf/10.1145/3318464.3380573",
     "github": "",
-    "slides": ""
+    "slides": "",
+    "contribution": "Information-theoretic pruning for approximate acyclic schema discovery from relations using multivalued dependencies.",
+    "tags": ["Data Systems", "Algorithms"]
   },
   {
     "id": "treesmu",
@@ -61,9 +77,10 @@
     "authors": ["Forough Arabshahi", "Zhichu Lu", "Pranay Mundra", "Sameer Singh", "Animashree Anandkumar"],
     "venue": "arXiv preprint",
     "year": 2019,
-    "date": "2019-11-05",
     "paperurl": "https://arxiv.org/pdf/1911.01545",
     "github": "",
-    "slides": ""
+    "slides": "",
+    "contribution": "Recursive neural architecture for compositional generalization in mathematical reasoning, beating Transformer/Tree-LSTM baselines.",
+    "tags": ["ML Systems", "Algorithms"]
   }
 ]

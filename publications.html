@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Pranay Mundra</title>
-    <meta name="description" content="Research publications by Pranay Mundra">
+    <title>Publications — Pranay Mundra</title>
+    <meta name="description" content="Peer-reviewed publications by Pranay Mundra in differential privacy, algorithms, graph systems, search, and data systems (VLDB, ICDE, SIGMOD, ICML).">
+    <link rel="canonical" href="https://mundrapranay.github.io/publications.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Publications — Pranay Mundra">
+    <meta property="og:description" content="Peer-reviewed publications by Pranay Mundra in differential privacy, algorithms, graph systems, search, and data systems (VLDB, ICDE, SIGMOD, ICML).">
+    <meta property="og:url" content="https://mundrapranay.github.io/publications.html">
+    <meta property="og:image" content="https://mundrapranay.github.io/assets/images/profile.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Publications — Pranay Mundra">
+    <meta name="twitter:description" content="Peer-reviewed publications by Pranay Mundra in differential privacy, algorithms, graph systems, search, and data systems (VLDB, ICDE, SIGMOD, ICML).">
+    <meta name="twitter:image" content="https://mundrapranay.github.io/assets/images/profile.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,62 +27,108 @@
         <div class="header-content">
             <a href="index.html" class="logo">PM</a>
             <nav>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">About</a></li>
-                </ul>
+                <ul class="nav-links" id="nav-links"></ul>
                 <button class="theme-toggle" aria-label="Toggle dark mode">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
-                <button class="menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
             </nav>
         </div>
         <div class="mobile-nav" id="mobile-nav">
-            <ul id="mobile-nav-links">
-                <li><a href="index.html">About</a></li>
-            </ul>
+            <ul id="mobile-nav-links"></ul>
             <div class="mobile-nav-footer">
                 <div class="mobile-nav-socials" id="mobile-socials"></div>
             </div>
         </div>
     </header>
-    
     <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
 
-    <!-- Page Title -->
-    <section class="page-title">
+    <section class="publications-page section" style="padding-top: 120px;">
         <div class="container">
-            <h1>Publications</h1>
-            <p>Research papers and academic contributions</p>
-        </div>
-    </section>
+            <div class="page-intro animate-on-scroll">
+                <h1>Publications</h1>
+                <p>Peer-reviewed work spanning differential privacy, algorithms, graph and data systems, and search.</p>
+            </div>
 
-    <!-- Publications List -->
-    <section class="publications-section section">
-        <div class="container">
+            <div class="pub-filters" id="pub-filters">
+                <button class="pub-filter is-active" data-tag="all">All</button>
+                <button class="pub-filter" data-tag="Algorithms">Algorithms</button>
+                <button class="pub-filter" data-tag="Privacy">Privacy</button>
+                <button class="pub-filter" data-tag="ML Systems">ML Systems</button>
+                <button class="pub-filter" data-tag="Search">Search</button>
+                <button class="pub-filter" data-tag="Data Systems">Data Systems</button>
+            </div>
+
             <ul class="publications-list" id="publications-list">
-                <!-- Loaded dynamically -->
+                <li class="pub-item animate-on-scroll" id="lapras" data-tags="Algorithms,Privacy,ML Systems">
+                    <div class="publication-title">LAPRAS: Learning-Augmented Private Online Analytics</div>
+                    <div class="publication-authors"><strong>Pranay Mundra</strong>, Quanquan C. Liu</div>
+                    <div class="publication-venue">International Conference on Machine Learning (ICML), <span class="publication-year">2026</span></div>
+                    <div class="publication-contribution">Learning-augmented online algorithm that uses workload predictions and adaptive budget allocation to approach offline utility for private analytics.</div>
+                    <div class="pub-tags">Algorithms · Privacy · ML Systems</div>
+                </li>
+
+                <li class="pub-item animate-on-scroll" id="seda" data-tags="Search,Data Systems,Algorithms">
+                    <div class="publication-title">SeDa: Bridging the Gap between Efficient Syntactic and Precise Semantic Search of Similar Passages in Large Text Corpora</div>
+                    <div class="publication-authors"><strong>Pranay Mundra</strong>, Daniel Kocher, Martin Schäler, Nikolaus Augsten</div>
+                    <div class="publication-venue">Very Large Data Bases (VLDB), <span class="publication-year">2026</span></div>
+                    <div class="publication-contribution">Combines efficient syntactic filtering with precise semantic verification for scalable similar-passage search over large text corpora.</div>
+                    <div class="pub-tags">Search · Data Systems · Algorithms</div>
+                </li>
+
+                <li class="pub-item animate-on-scroll" id="ledp" data-tags="Privacy,Algorithms,Data Systems">
+                    <div class="publication-title"><a href="https://arxiv.org/abs/2506.20828" target="_blank" rel="noopener noreferrer">Practical and Accurate Local Edge Differentially Private Graph Algorithms</a></div>
+                    <div class="publication-authors"><strong>Pranay Mundra</strong>, Charalampos Papamanthou, Julian Shun, Quanquan C. Liu</div>
+                    <div class="publication-venue">Very Large Data Bases (VLDB), <span class="publication-year">2025</span></div>
+                    <div class="publication-contribution">Distributed local edge-DP k-core and triangle counting with input-sensitive accuracy, within 3× error for k-core and orders of magnitude lower triangle error.</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2506.20828" target="_blank" rel="noopener noreferrer">Paper</a>
+                        <a href="https://zenodo.org/records/15741880" target="_blank" rel="noopener noreferrer">Code</a>
+                        <a href="files/VLDB2025_Slides.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+                    </div>
+                    <div class="pub-tags">Privacy · Algorithms · Data Systems</div>
+                </li>
+
+                <li class="pub-item animate-on-scroll" id="aqp" data-tags="Data Systems,Algorithms">
+                    <div class="publication-title"><a href="https://dl.acm.org/doi/pdf/10.1145/3597465.3605227" target="_blank" rel="noopener noreferrer">Approximate Query Answering over Open Data</a></div>
+                    <div class="publication-authors">Mengqi Zhang, <strong>Pranay Mundra</strong>, Chukwubuikem Chikweze, Fatemeh Nargesian, Gerhard Weikum</div>
+                    <div class="publication-venue">Human-In-Loop Data Analytics (HILDA), <span class="publication-year">2023</span></div>
+                    <div class="publication-contribution">Approximate aggregate query answering over noisy, incomplete open knowledge.</div>
+                    <div class="pub-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3597465.3605227" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                    <div class="pub-tags">Data Systems · Algorithms</div>
+                </li>
+
+                <li class="pub-item animate-on-scroll" id="koios" data-tags="Search,Algorithms,Data Systems">
+                    <div class="publication-title"><a href="https://arxiv.org/pdf/2304.10572" target="_blank" rel="noopener noreferrer">KOIOS: Top-K Semantic Overlap Set Search</a></div>
+                    <div class="publication-authors"><strong>Pranay Mundra</strong>, Jianhao Zhang, Fatemeh Nargesian, Nikolaus Augsten</div>
+                    <div class="publication-venue">IEEE International Conference on Data Engineering (ICDE), <span class="publication-year">2023</span></div>
+                    <div class="publication-contribution">Exact top-k semantic set search via bipartite-matching bounds and filter–verification, 5.5× faster than prior methods.</div>
+                    <div class="pub-links"><a href="https://arxiv.org/pdf/2304.10572" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                    <div class="pub-tags">Search · Algorithms · Data Systems</div>
+                </li>
+
+                <li class="pub-item animate-on-scroll" id="maimon" data-tags="Data Systems,Algorithms">
+                    <div class="publication-title"><a href="https://dl.acm.org/doi/pdf/10.1145/3318464.3380573" target="_blank" rel="noopener noreferrer">Mining Approximate Acyclic Schemas from Relations</a></div>
+                    <div class="publication-authors">Batya Kenig, <strong>Pranay Mundra</strong>, Guna Prasaad, Babak Salimi, Dan Suciu</div>
+                    <div class="publication-venue">ACM SIGMOD International Conference on Management of Data, <span class="publication-year">2020</span></div>
+                    <div class="publication-contribution">Information-theoretic pruning for approximate acyclic schema discovery from relations using multivalued dependencies.</div>
+                    <div class="pub-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3318464.3380573" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                    <div class="pub-tags">Data Systems · Algorithms</div>
+                </li>
+
+                <li class="pub-item animate-on-scroll" id="treesmu" data-tags="ML Systems,Algorithms">
+                    <div class="publication-title"><a href="https://arxiv.org/pdf/1911.01545" target="_blank" rel="noopener noreferrer">Compositional Generalization with Tree Stack Memory Units</a></div>
+                    <div class="publication-authors">Forough Arabshahi, Zhichu Lu, <strong>Pranay Mundra</strong>, Sameer Singh, Animashree Anandkumar</div>
+                    <div class="publication-venue">arXiv preprint, <span class="publication-year">2019</span></div>
+                    <div class="publication-contribution">Recursive neural architecture for compositional generalization in mathematical reasoning, beating Transformer/Tree-LSTM baselines.</div>
+                    <div class="pub-links"><a href="https://arxiv.org/pdf/1911.01545" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                    <div class="pub-tags">ML Systems · Algorithms</div>
+                </li>
             </ul>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -79,7 +137,6 @@
             </div>
         </div>
     </footer>
-
     <script src="assets/js/main.js"></script>
 </body>
 </html>
