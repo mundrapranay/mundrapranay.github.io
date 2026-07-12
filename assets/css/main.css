@@ -779,6 +779,42 @@ nav {
   height: 14px;
 }
 
+/* ---------- Home: hero extras, themes, work preview ---------- */
+.hero-expertise {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: var(--space-xs) 0 var(--space-sm);
+  max-width: none;
+  letter-spacing: 0;
+}
+.themes-grid, .work-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-sm);
+}
+.theme-card, .work-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: var(--space-sm);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+.work-card { display: block; color: inherit; }
+.work-card:hover, .theme-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  color: inherit;
+}
+.work-tags {
+  display: block;
+  margin-top: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
 /* ---------- CV Section - Grid Layout ---------- */
 .cv-section {
   padding: var(--space-lg) 0;
