@@ -1387,7 +1387,6 @@ footer p {
 .timeline-date { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem; }
 .timeline-body h3 { margin-bottom: 0.3rem; }
 .timeline-body a { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); }
-.btn-sm { padding: 0.35rem 0.8rem; font-size: 0.8rem; }
 
 /* ---------- Writing ---------- */
 .writing-list { list-style: none; }
