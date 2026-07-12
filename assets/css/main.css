@@ -4,21 +4,21 @@
 
 /* ---------- CSS Variables ---------- */
 :root {
-  /* Colors - Navy Blue Minimal */
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-accent: #f1f5f9;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
-  --accent: #1e3a5f;
-  --accent-hover: #2d4a6f;
-  --accent-light: #e0e7ef;
-  --accent-gradient: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
-  --border: #e2e8f0;
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 4px 20px rgba(15, 23, 42, 0.06);
-  --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.08);
+  /* Colors - Warm paper + navy accent */
+  --bg-primary: #f6f2ea;
+  --bg-secondary: #fffdf9;
+  --bg-accent: #efe8db;
+  --text-primary: #1d1b16;
+  --text-secondary: #57514a;
+  --text-muted: #7a7367;
+  --accent: #1f3a5f;
+  --accent-hover: #2c4a6f;
+  --accent-light: #e5ddca;
+  --accent-gradient: linear-gradient(135deg, #1f3a5f 0%, #2c4a6f 100%);
+  --border: #e7dfce;
+  --shadow-sm: 0 1px 3px rgba(60, 48, 30, 0.05);
+  --shadow-md: 0 4px 20px rgba(60, 48, 30, 0.07);
+  --shadow-lg: 0 12px 40px rgba(60, 48, 30, 0.10);
   
   /* Typography - Clean & Spacious */
   --font-display: 'Source Serif 4', Georgia, serif;
@@ -1484,3 +1484,151 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 }
 .note h2 { margin: 0.4rem 0 0.35rem; }
 .note-paper { font-size: 0.9rem; color: var(--text-muted); margin-bottom: var(--space-sm); }
+
+/* ==========================================================================
+   Visual identity refresh: editorial system, graph accent, micro-motion
+   ========================================================================== */
+
+/* ---------- Editorial section eyebrows ---------- */
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+.section-eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--accent);
+  flex: 0 0 auto;
+}
+.eyebrow-num { color: var(--accent); font-weight: 500; }
+
+/* ---------- Node markers (graph motif on lists) ---------- */
+.pub-item { position: relative; padding-left: 1.35rem; }
+.pub-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.95rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  transition: transform 0.25s var(--ease-out);
+}
+.pub-item:hover::before { transform: scale(1.5); }
+.note-toc li { position: relative; padding-left: 1.1rem; }
+.note-toc li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ---------- Signature hero graph accent ---------- */
+.hero { position: relative; }
+.hero .container { position: relative; z-index: 1; }
+.hero-graph {
+  position: absolute;
+  top: 96px;
+  right: 2rem;
+  width: min(240px, 22vw);
+  height: auto;
+  color: var(--accent);
+  opacity: 0.14;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-graph .edges line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: graphdraw 0.9s var(--ease-out) forwards;
+}
+.hero-graph .edges line:nth-child(2) { animation-delay: 0.12s; }
+.hero-graph .edges line:nth-child(3) { animation-delay: 0.24s; }
+.hero-graph .edges line:nth-child(4) { animation-delay: 0.36s; }
+.hero-graph .edges line:nth-child(5) { animation-delay: 0.48s; }
+.hero-graph .nodes circle {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: graphpop 0.4s var(--ease-out) forwards;
+}
+.hero-graph .nodes circle:nth-child(2) { animation-delay: 0.15s; }
+.hero-graph .nodes circle:nth-child(3) { animation-delay: 0.3s; }
+.hero-graph .nodes circle:nth-child(4) { animation-delay: 0.45s; }
+.hero-graph .nodes circle:nth-child(5) { animation-delay: 0.6s; }
+@keyframes graphdraw { to { stroke-dashoffset: 0; } }
+@keyframes graphpop { from { opacity: 0; transform: scale(0); } to { opacity: 1; transform: scale(1); } }
+@media (max-width: 900px) { .hero-graph { display: none; } }
+
+/* ---------- Micro-interactions ---------- */
+/* Staggered reveal within groups */
+.themes-grid .theme-card:nth-child(2),
+.publications-list .pub-item:nth-child(2),
+.note-toc li:nth-child(2) { transition-delay: 0.05s; }
+.themes-grid .theme-card:nth-child(3),
+.publications-list .pub-item:nth-child(3),
+.note-toc li:nth-child(3) { transition-delay: 0.10s; }
+.themes-grid .theme-card:nth-child(4),
+.publications-list .pub-item:nth-child(4),
+.note-toc li:nth-child(4) { transition-delay: 0.15s; }
+.themes-grid .theme-card:nth-child(5),
+.publications-list .pub-item:nth-child(5),
+.note-toc li:nth-child(5) { transition-delay: 0.20s; }
+.themes-grid .theme-card:nth-child(6),
+.publications-list .pub-item:nth-child(6),
+.note-toc li:nth-child(6) { transition-delay: 0.25s; }
+
+/* Grow-in underline on content links */
+.publication-title a,
+.pub-links a,
+.note-paper a,
+.note-toc a {
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s var(--ease-out), color 0.2s var(--ease-out);
+}
+.publication-title a:hover,
+.pub-links a:hover,
+.note-paper a:hover,
+.note-toc a:hover { background-size: 100% 1px; color: var(--accent); }
+
+/* Arrow slide on buttons */
+.btn svg { transition: transform 0.25s var(--ease-out); }
+.btn:hover svg { transform: translateX(4px); }
+
+/* Smooth theme cross-fade on large surfaces
+   (scoped to elements without a reveal/hover transition, so it never clobbers them) */
+body,
+.section,
+footer {
+  transition: background-color 0.35s var(--ease-out), color 0.35s var(--ease-out), border-color 0.35s var(--ease-out);
+}
+
+/* ---------- Respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-on-scroll { opacity: 1 !important; transform: none !important; }
+  .hero-graph .edges line { stroke-dashoffset: 0 !important; }
+  .hero-graph .nodes circle { opacity: 1 !important; transform: none !important; }
+}
