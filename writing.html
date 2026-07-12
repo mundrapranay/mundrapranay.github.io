@@ -93,7 +93,7 @@
       <h2>Finding the most similar datasets - exactly, and fast</h2>
       <p class="note-paper">On <a href="https://arxiv.org/pdf/2304.10572" target="_blank" rel="noopener noreferrer">KOIOS: Top-K Semantic Overlap Set Search</a></p>
       <p>Given a set - say, the values in a column - you often want the top-k most similar sets in a huge repository, where "similar" means real semantic overlap rather than identical items. The precise notion of similarity requires solving a matching problem between the two sets' elements: accurate, but expensive to compute for every candidate in a large data lake.</p>
-      <p>KOIOS uses a filter–verification strategy. Instead of fully scoring every candidate, it computes cheap upper and lower bounds on the true similarity using bipartite-matching arguments, and uses those bounds to prune the vast majority of candidates that provably can't make the top-k. Only the few survivors get the expensive exact check.</p>
+      <p>KOIOS uses a filter-verification strategy. Instead of fully scoring every candidate, it computes cheap upper and lower bounds on the true similarity using bipartite-matching arguments, and uses those bounds to prune the vast majority of candidates that provably can't make the top-k. Only the few survivors get the expensive exact check.</p>
       <p>Because the bounds are sound, the answers are exact - no approximation - while running about 5.5× faster than prior methods, which makes semantic set search practical over large collections.</p>
     </article>
 

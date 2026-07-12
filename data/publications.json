@@ -56,7 +56,7 @@
     "paperurl": "https://arxiv.org/pdf/2304.10572",
     "github": "",
     "slides": "",
-    "contribution": "Exact top-k semantic set search via bipartite-matching bounds and filter–verification, 5.5× faster than prior methods.",
+    "contribution": "Exact top-k semantic set search via bipartite-matching bounds and filter-verification, 5.5× faster than prior methods.",
     "tags": ["Search", "Algorithms", "Data Systems"]
   },
   {
