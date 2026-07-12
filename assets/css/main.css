@@ -1339,3 +1339,23 @@ footer p {
 .mb-sm { margin-bottom: var(--space-sm); }
 .mb-md { margin-bottom: var(--space-md); }
 .mb-lg { margin-bottom: var(--space-lg); }
+
+/* ---------- Work / case studies ---------- */
+.page-intro { max-width: 75ch; margin-bottom: var(--space-md); }
+.case-study {
+  border-top: 1px solid var(--border);
+  padding: var(--space-md) 0;
+}
+.case-study h2 { margin-bottom: 0.25rem; }
+.case-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+}
+.case-meta {
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+  margin: var(--space-sm) 0 0.75rem;
+}
+.case-venue { font-weight: 600; color: var(--text-primary); }
+.btn-sm { padding: 0.35rem 0.8rem; font-size: 0.8rem; }

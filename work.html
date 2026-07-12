@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selected Work — Pranay Mundra</title>
+<meta name="description" content="Case studies in differential privacy, distributed graph algorithms, high-performance computing, and ML systems by Pranay Mundra.">
+<link rel="canonical" href="https://mundrapranay.github.io/work.html">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Selected Work — Pranay Mundra">
+<meta property="og:description" content="Case studies in differential privacy, distributed graph algorithms, high-performance computing, and ML systems by Pranay Mundra.">
+<meta property="og:url" content="https://mundrapranay.github.io/work.html">
+<meta property="og:image" content="https://mundrapranay.github.io/assets/images/profile.png">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Selected Work — Pranay Mundra">
+<meta name="twitter:description" content="Case studies in differential privacy, distributed graph algorithms, high-performance computing, and ML systems by Pranay Mundra.">
+<meta name="twitter:image" content="https://mundrapranay.github.io/assets/images/profile.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <a href="index.html" class="logo">PM</a>
+        <nav>
+            <ul class="nav-links" id="nav-links"></ul>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </nav>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+        <ul id="mobile-nav-links"></ul>
+        <div class="mobile-nav-footer">
+            <div class="mobile-nav-socials" id="mobile-socials"></div>
+        </div>
+    </div>
+</header>
+<div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+
+<section class="work-page section" style="padding-top: 120px;">
+  <div class="container">
+    <div class="page-intro animate-on-scroll">
+      <h1>Selected Work</h1>
+      <p>I design algorithms and build systems that make machine learning, graph analytics, and privacy-preserving computation more accurate, scalable, and practical. Below are representative projects across my three research themes.</p>
+    </div>
+
+    <article class="case-study animate-on-scroll" id="lapras">
+      <h2>LAPRAS</h2>
+      <p class="case-subtitle">Learning-augmented private online analytics</p>
+      <p><strong>Problem.</strong> Answering a stream of private queries well requires spending a fixed privacy budget wisely under uncertainty about future demand.</p>
+      <p><strong>Contribution.</strong> Uses predicted query workloads and adaptive budget allocation via the Matrix Mechanism to approach offline utility when predictions are accurate while degrading gracefully when they are not.</p>
+      <p><strong>Result.</strong> Accepted at ICML 2026.</p>
+      <p class="case-meta"><span class="case-venue">ICML 2026</span></p>
+      <span class="work-tags">Online Algorithms · Differential Privacy · Optimization</span>
+    </article>
+
+    <article class="case-study animate-on-scroll" id="ledp">
+      <h2>Practical Local Edge-DP Graph Algorithms</h2>
+      <p class="case-subtitle">Distributed private graph analytics</p>
+      <p><strong>Problem.</strong> Computing graph statistics under strong local edge differential privacy usually destroys accuracy at scale.</p>
+      <p><strong>Contribution.</strong> Distributed algorithms for k-core decomposition and triangle counting with input-sensitive guarantees based on graph degeneracy and maximum degree.</p>
+      <p><strong>Result.</strong> Within 3× error for k-core (vs a 131× baseline) and up to six orders of magnitude lower triangle-counting error, evaluated on billion-edge graphs.</p>
+      <p class="case-meta"><span class="case-venue">VLDB 2025</span>
+        <a href="https://arxiv.org/abs/2506.20828" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Paper</a>
+        <a href="https://zenodo.org/records/15741880" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Code</a>
+      </p>
+      <span class="work-tags">Graph Algorithms · Distributed Systems · Privacy</span>
+    </article>
+
+    <article class="case-study animate-on-scroll" id="ebay">
+      <h2>eBay Graph Learning</h2>
+      <p class="case-subtitle">Large-scale recommendation infrastructure</p>
+      <p><strong>Problem.</strong> Recommendation over massive user-behavior graphs needs GNN training that stays fast and stable at production scale.</p>
+      <p><strong>Contribution.</strong> Engineering distributed GNN training pipelines over large user-behavior graphs, with emphasis on sparse representations, latency, throughput, and convergence.</p>
+      <p><strong>Result.</strong> Ongoing applied research, described at a public, non-confidential level.</p>
+      <p class="case-meta"><span class="case-venue">eBay · 2025–present</span></p>
+      <span class="work-tags">GNNs · PyTorch · Distributed ML</span>
+    </article>
+
+    <article class="case-study animate-on-scroll" id="koios">
+      <h2>KOIOS</h2>
+      <p class="case-subtitle">Exact semantic set search</p>
+      <p><strong>Problem.</strong> Top-k semantic overlap set search is accurate but historically too slow for large corpora.</p>
+      <p><strong>Contribution.</strong> A filter–verification system using bipartite-matching bounds to prune candidates without sacrificing exactness.</p>
+      <p><strong>Result.</strong> 5.5× speedup over prior methods; published at ICDE 2023.</p>
+      <p class="case-meta"><span class="case-venue">ICDE 2023</span>
+        <a href="https://arxiv.org/pdf/2304.10572" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Paper</a>
+      </p>
+      <span class="work-tags">Algorithms · Search · Graph Matching</span>
+    </article>
+
+    <article class="case-study animate-on-scroll" id="treesmu">
+      <h2>Tree-SMU</h2>
+      <p class="case-subtitle">Compositional generalization for mathematical reasoning</p>
+      <p><strong>Problem.</strong> Standard sequence models generalize poorly to the compositional structure of mathematical expressions.</p>
+      <p><strong>Contribution.</strong> Co-developed a recursive neural architecture (Tree Stack Memory Units) that models compositional structure explicitly.</p>
+      <p><strong>Result.</strong> Outperformed Transformer, Tree Transformer, and Tree-LSTM baselines across four evaluations.</p>
+      <p class="case-meta"><span class="case-venue">arXiv 2019</span>
+        <a href="https://arxiv.org/pdf/1911.01545" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Paper</a>
+      </p>
+      <span class="work-tags">Deep Learning · Reasoning · Representation Learning</span>
+    </article>
+
+    <article class="case-study animate-on-scroll" id="gpu">
+      <h2>GPU-Accelerated Gene Network Modeling</h2>
+      <p class="case-subtitle">Scientific computing with CUDA</p>
+      <p><strong>Problem.</strong> Gene-network analysis kernels were too slow to run at the scale experiments demanded.</p>
+      <p><strong>Contribution.</strong> Parallelized the core computational kernels on the GPU to make the system suitable for larger experimental workloads.</p>
+      <p><strong>Result.</strong> Enabled substantially larger gene-network experiments.</p>
+      <p class="case-meta"><span class="case-venue">Research software</span></p>
+      <span class="work-tags">CUDA · C++ · Scientific Computing</span>
+    </article>
+  </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-links" id="footer-links"></div>
+            <p>&copy; <span id="year"></span> Pranay Mundra. Built with care.</p>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
